@@ -169,7 +169,7 @@
 \newtheorem*{remark}{Remark}
 \newtheorem*{observation}{Observation}
 \newtheorem{question}[theorem]{Question}
-\newtheorem*{claim}{Claim}
+\newtheorem{claim}{Claim}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 %\newglossarystyle{mystyle}{%
@@ -186,13 +186,13 @@
 %
 %\newacronym[sort=knnk]{Knnk}{$\Kn(n,k)$}{The Kneser graph whose vertices are $k$-subsets of $[n]$}
 %
-%\newacronym[sort=rx]{Rx}{$R(X)$}{For a set of cells $X \subseteq L$, the multiset of rows of $L$ covered by $X$ }
+%\newacronym[sort=rx]{Rx}{$R(X)$}{For a set of entries $X \subseteq L$, the multiset of rows of $L$ covered by $X$ }
 %
-%\newacronym[sort=rx1]{Rpx}{$R^\prime(X)$}{For a set of cells $X \subseteq L$, the set of rows of $L$ covered by $X$ }
+%\newacronym[sort=rx1]{Rpx}{$R^\prime(X)$}{For a set of entries $X \subseteq L$, the set of rows of $L$ covered by $X$ }
 %
-%\newacronym[sort=cx]{Cx}{$C(X)$}{For a set of cells $X \subseteq L$, the multiset of columns of $L$ covered by $X$ }
+%\newacronym[sort=cx]{Cx}{$C(X)$}{For a set of entries $X \subseteq L$, the multiset of columns of $L$ covered by $X$ }
 %
-%\newacronym[sort=cx1]{Cpx}{$C^\prime(X)$}{For a set of cells $X \subseteq L$, the set of columns of $L$ covered by $X$ }
+%\newacronym[sort=cx1]{Cpx}{$C^\prime(X)$}{For a set of entries $X \subseteq L$, the set of columns of $L$ covered by $X$ }
 %
 \newacronym[sort=b]{b}{$\langle b \rangle$}{The cyclic subgroup of a group $G$ generated  by the element $b \in G$}
 %
@@ -214,7 +214,7 @@
 %
 \newacronym[sort=gC]{gC}{$[g]_C$}{The vertex of $K_{n,n}(G)$ corresponding to the column of $L_G$ with index $g$}
 %
-%\newacronym[sort=sx1]{Spx}{$S^\prime(X)$}{For a set of cells $X \subseteq L$, the set of symbols contained in $X$ }
+%\newacronym[sort=sx1]{Spx}{$S^\prime(X)$}{For a set of entries $X \subseteq L$, the set of symbols contained in $X$ }
 %
 \newacronym[sort=pl]{Pl}{$P_\ell$}{The path graph on $\ell$ vertices}
 %
@@ -232,7 +232,7 @@
 %
 %\newacronym[sort=o2]{lilo}{$o(f)$}{Given a function $f$, the set of functions $g$ for which $\lim_{n\rightarrow \infty} \frac{g(n)}{f(n)} = 0$ }
 %
-\newacronym[sort=1pme]{1pme}{$(1 \pm \varepsilon)n$ }{For $n \in \mathbb{N}$ and $\varepsilon>0$, the interval $\left((1-\varepsilon)n,(1+\varepsilon)n\right)$}
+\newacronym[sort=dpme]{dpme}{$(d \pm \varepsilon)n$ }{For $d,n \in \mathbb{N}$ and $\varepsilon>0$, the interval $\left((d-\varepsilon)n,(d+\varepsilon)n\right)$}
 %
 %
 %\newacronym[sort=kn]{Kn}{$\overrightarrow{K}_n$}{The directed graph with vertex set $[n]$ and arcs $ij$ for all $i,j \in [n]$ such that $i \neq j$}
@@ -259,6 +259,8 @@
 %
 %
 \newacronym[sort=deltaG]{deltaG}{$\delta(G)$}{ The minimum degree of the graph $G$}
+%
+\newacronym[sort=DeltaG]{DeltaG}{$\Delta(G)$}{ The maximum degree of the graph $G$}
 %
 \newacronym[sort=Ofn]{bigO}{$O(f(n))$}{The class of functions $g$ such that $\limsup_{n\rightarrow \infty} g(n)/f(n) < \infty$}
 %
@@ -289,20 +291,20 @@ description={An $n \times n$ array in which no symbol appears more than $k$ time
 \newglossaryentry{square latin array}
 {
 name=square latin array,
-description={An $n \times n$ array containing symbols from set of size $m \geq n$ such that no symbol appears more than once in any row or column.}
+description={An $n \times n$ array containing symbols from a set of size $m \geq n$ such that no symbol appears more than once in any row or column.}
 }
 
-\newglossaryentry{cayley table}
+\newglossaryentry{Cayley table}
 {
 name=cayley table,
-description={Of a group $G$, another name for the group-based latin square $L_G$.}
+description={Of a group $G$, a latin square whose rows and columns are indexed by the elements of $G$ with the entryin row $g$ column $h$ containing the symbol $gh$.}
 }
 
 
 \newglossaryentry{row-latin array}
 {
 name=row-latin array,
-description={A rectangular array in which no symbol appears more than once in any row}
+description={A rectangular array in which no symbol appears more than once in any row.}
 }
 
 \newglossaryentry{2-group}
@@ -363,27 +365,27 @@ description={A rectangular array in which no symbol appears more than once in an
 {
 sort=k-plex,
     name=$k$-plex,
-    description={For a positive integer $k$, a collection of cells in a latin square, or other square array, which intersects each row and column exactly $k$ times and contains at most $k$ copies of each symbol.}
+    description={For a positive integer $k$, a collection of entries in a latin square which intersects each row and column $k$ times and contains $k$ copies of each symbol.}
 }
 
 \newglossaryentry{partial k-plex}
 {
     name=partial $k$-plex,
-    description={For a positive integer $k$, a collection of cells in a latin square, or other square array, which intersects each row and column at most $k$ times and contains at most $k$ copies of each symbol.}
+    description={For a positive integer $k$, a collection of entries in a latin square, or other square array, which intersects each row and column at most $k$ times and contains at most $k$ copies of each symbol.}
 }
 
 \newglossaryentry{kl-plex}
 {
 sort=kl-plex,
     name={$(k,\ell)$-plex},
-    description={For positive integers $k$ and $\ell$, a collection of cells in a latin square, or other square array, which intersects each row and column exactly $k$ times and contains at most $\ell$ copies of each symbol.}
+    description={For positive integers $k$ and $\ell$, a collection of entries in a latin square, or other square array, which intersects each row and column exactly $k$ times and contains at most $\ell$ copies of each symbol. In a latin square, a $(k,k)$-plex is always a $k$-plex, but this may not be the case in arrays with more symbols than rows.}
 }
 
 \newglossaryentry{main diagonal}
 {
 sort=main diagonal,
     name={main diagonal},
-    description={Of a square array, the set of cells whose column index is equal to their row index.}
+    description={Of a square array, the set of entries whose column index is equal to their row index.}
 }
 
 \newglossaryentry{bipartition}
@@ -432,7 +434,7 @@ description={An edge-colored graph containing at most 2 edges of any given color
  \newglossaryentry{transversal}
 {
     name=transversal,
-    description={In an $m \times n$ array, a collection of  $\min\{m,n\}$ cells that intersects each row and column at most once and contains exactly at most copy of each symbol. }
+    description={In an $m \times n$ array, a collection of  $\min\{m,n\}$ entries that intersects each row and column at most once and contains at most copy of each symbol. }
 }
 %
 \newglossaryentry{Mobius ladder}
@@ -463,7 +465,7 @@ description={An edge-colored graph containing at most 2 edges of any given color
 \newglossaryentry{isotopy class}
 {
     name=isotopy class,
-    description={If $L_1$ and $L_2$ are latin squares of order $n$, we say that $L_1$ and $L_2$ are \defn{isotopic} if there is an automorphism of $K_{n,n}$ that maps each color class of $K_{n,n}(L_1)$ to a color class of $K_{n,n}(L_2)$. An isotopy class is a maximal collection of isotopic latin squares.}
+    description={If $L_1$ and $L_2$ are latin squares of order $n$, we say that $L_1$ and $L_2$ are \defn{isotopic} if there is an automorphism of $K_{n,n}$ that fixes the vertex bipartition and maps each color class of $K_{n,n}(L_1)$ to a color class of $K_{n,n}(L_2)$. An isotopy class is a maximal collection of isotopic latin squares.}
 }
 %
 %
@@ -478,7 +480,7 @@ description={An edge-colored graph containing at most 2 edges of any given color
  \newglossaryentry{partial transversal}
 {
     name=partial transversal,
-    description={A collection of cells in a latin square, or other rectangular array, that intersects each row and each column at most once and contains at most one copy of each symbol. }
+    description={A collection of entries in a latin square, or other rectangular array, that intersects each row and each column at most once and contains at most one copy of each symbol. }
 }
 
 
@@ -498,7 +500,7 @@ description={An edge-colored graph containing at most 2 edges of any given color
  \newglossaryentry{complete mapping}
 {
     name=complete mapping,
-    description={Of a group $G$, a bijective function $\theta:G \rightarrow G$ such that $g \mapsto g \theta(g)$ is also a bijection. Given $a,b,c \in G$, we say that $\phi:G\setminus\{a\} \rightarrow G \setminus \{b\}$ is a \defn{near complete mapping} if $g \mapsto g\phi(g)$ is a bijection between $G \setminus \{a\}$ and $G \setminus \{c\}$. If $\theta$ is a complete mapping of $G$, then $\{(g,\theta(g),g\theta(g)) \mid g \in G\}$ is a transversal of $L_G$.  Similarly, near complete mappings of $G$ are equivalent to near transversals of $L_G$.}
+    description={Of a group $G$, a bijective function $\theta:G \rightarrow G$ such that $g \mapsto g \theta(g)$ is also a bijection. Similarly, a \defn{near complete mapping} of $G$ is a bijection $\phi:G\setminus\{a\} \rightarrow G \setminus \{b\}$ such that $g \mapsto g\phi(g)$ is a bijection between $G \setminus \{a\}$ and $G \setminus \{c\}$ for some $a,b,c \in G$. If $\theta$ is a complete mapping of $G$, then $\{(g,\theta(g),g\theta(g)) \mid g \in G\}$ is a transversal of $L_G$.  Similarly, near complete mappings of $G$ are equivalent to near transversals of $L_G$.}
 }
 %
 % \newglossaryentry{parastrophy}
@@ -528,13 +530,13 @@ description={An edge-colored graph containing at most 2 edges of any given color
 %\clearpage
 
 \begin{abstract}
-A latin square of order $n$ is an $n \times n$ array in which each row and each column contains each of the numbers $\{1,2,\ldots,n\}$. A $k$-plex in a latin square is a collection of cells which intersects each row and column $k$ times and contains $k$ copies of each symbol. This thesis studies the existence of $k$-plexes and approximations of $k$-plexes in latin squares, paying particular attention to latin squares which correspond to multiplication tables of groups.
+A latin square of order $n$ is an $n \times n$ array in which each row and each column contains each of the numbers $\{1,2,\ldots,n\}$. A $k$-plex in a latin square is a collection of entries which intersects each row and column $k$ times and contains $k$ copies of each symbol. This thesis studies the existence of $k$-plexes and approximations of $k$-plexes in latin squares, paying particular attention to latin squares which correspond to multiplication tables of groups.
 
-The most commonly studied class of $k$-plex is the $1$-plex, better known as a transversal. Although many latin squares do not have transversals, Brualdi conjectured that every latin square has a near transversal---i.e.\! a collection of cells with distinct symbols which intersects all but one row and all but one column. Our first main result confirms Brualdi's conjecture in the special case of group-based latin squares.
+The most commonly studied class of $k$-plex is the $1$-plex, better known as a transversal. Although many latin squares do not have transversals, Brualdi conjectured that every latin square has a near transversal---i.e.\! a collection of entries with distinct symbols which intersects all but one row and all but one column. Our first main result confirms Brualdi's conjecture in the special case of group-based latin squares.
 
 Then, using a well-known equivalence between edge-colorings of complete bipartite graphs and latin squares, we introduce Hamilton 2-plexes. We conjecture that every latin square of order $n \geq 5$ has a Hamilton 2-plex and provide a range of evidence for this conjecture. In particular, we confirm our conjecture computationally for $n \leq 8$ and show that a suitable analogue of Hamilton 2-plexes always occur in $n \times n$ arrays with no symbol appearing more than $n/\sqrt{96}$ times. To study Hamilton 2-plexes in group-based latin squares, we generalize the notion of harmonious groups to what we call H2-harmonious groups. Our second main result classifies all H2-harmonious abelian groups. 
 
-The last part of the thesis formalizes an idea which first appeared in a paper of Cameron and Wanless: a $(k,\ell)$-plex is a collection of cells which intersects each row and column $k$ times and contains at most $\ell$ copies of each symbol. We demonstrate the existence of $(k,4k)$-plexes in all latin squares and $(k,k+1)$-plexes in sufficiently large latin squares. We also find analogues of these theorems for Hamilton 2-plexes, including our third main result: every sufficiently large latin square has a Hamilton (2,3)-plex.
+The last part of the thesis formalizes an idea which first appeared in a paper of Cameron and Wanless: a $(k,\ell)$-plex is a collection of entries which intersects each row and column $k$ times and contains at most $\ell$ copies of each symbol. We demonstrate the existence of $(k,4k)$-plexes in all latin squares and $(k,k+1)$-plexes in sufficiently large latin squares. We also find analogues of these theorems for Hamilton 2-plexes, including our third main result: every sufficiently large latin square has a Hamilton (2,3)-plex.
 \end{abstract}
 
 \begin{dedication}
@@ -627,12 +629,12 @@ Finally, I'd like to thank all of my dear friends, including extreme gratitude f
 Currently well-known to the general public in the special case of Sudoku puzzles, latin squares are mathematical objects whose rigorous study goes back over 300 years. While the earliest known appearance in the literature was an early 18th century monograph of Choi Seok-Jeong,  constructions of $4\times 4$ latin squares appear in the 13th century writings of Ahmad al-Buni  \cite[p.~12]{HandbookOfDesigns}. Today, latin squares are used by a wide range of scientists and engineers. They are a well-known and oft-utilized tool in the design of both statistical experiments and digital communications technology  \cite[Sec.~11.4]{DenesKeedwellBook}, and are currently being studied in myriad applied mathematical contexts  (see e.g. \cite{GH12,St20,XX17}).
 
 This thesis studies balanced substructures of latin squares. A \defn{latin square} $L$ of order $n$ is an $n \times n$ array in which each row and column is a permutation of some set $S(L)$ of size $n$ (usually the set of integers $[n]:=\{1,2,\ldots,n\}$). 
-Indexing rows and columns with $[n]$, latin squares can be treated as collections of $n^2$  ordered triples $L \subseteq [n]^3$. We refer to each triple $(r,c,s) \in L$ as a \defn{cell}. For positive integers $k \leq n$, a \defn{$k$-plex} of $L$ is a collection of cells which intersects each row and column $k$ times and contains $k$ copies of each symbol. Our main results concern the existence of $k$-plexes in latin squares and their generalizations. The first half of this thesis considers group-based latin squares, resolving the restriction to this setting of a well-known old conjecture due to Brualdi and establishing fundamental results concerning a new form of combinatorial group sequence. The second half poses and explores a graph-theoretic strengthening of a less famous conjecture due to Rodney and proves several existence results for approximations of plexes. 
+Indexing rows and columns with $[n]$, latin squares can be treated as collections of $n^2$  ordered triples $L \subseteq [n]^3$. We refer to each triple $(r,c,s) \in L$ as an \defn{entry}. For positive integers $k \leq n$, a \defn{$k$-plex} of $L$ is a collection of entries which intersects each row and column $k$ times and contains $k$ copies of each symbol. Our main results concern the existence of $k$-plexes in latin squares and their generalizations. The first half of this thesis considers group-based latin squares, resolving the restriction to this setting of a well-known old conjecture due to Brualdi and establishing fundamental results concerning a new form of combinatorial group sequence. The second half poses and explores a graph-theoretic strengthening of a less famous conjecture due to Rodney and proves several existence results for approximations of plexes. 
 
-% given a latin square $L$, we write $R(L)$ for the set of rows, $C(L)$ for the set of columns, $S(L)$ for the set of symbols, and refer to each $(r,c,s) \in R(L) \times C(L) \times S(L)$ as a . %We write $|L|$ to denote the order of $L$, rather than the number of triples in the corresponding set, so that $|L|=n$ even though we consider $L$ to be a set of $n^2$ cells.
+% given a latin square $L$, we write $R(L)$ for the set of rows, $C(L)$ for the set of columns, $S(L)$ for the set of symbols, and refer to each $(r,c,s) \in R(L) \times C(L) \times S(L)$ as a . %We write $|L|$ to denote the order of $L$, rather than the number of triples in the corresponding set, so that $|L|=n$ even though we consider $L$ to be a set of $n^2$ entries.
 
 
-The story of latin squares as an object of modern combinatorial mathematics begins with work of Leonard Euler from the late 18th century \cite{Euler} on a notion now known as orthogonality: two latin squares of order $n$ are said to be \defn{orthogonal} if the array one obtains by superimposing them contains each possible pair of symbols exactly once.\footnote{The somewhat peculiar name ``latin square'' was introduced by Euler because he was using latin squares to construct magic squares---squares with integer entries wherein the sum of each row, column, and main diagonal is the same---and following the algebraic convention of using latin letters for algebraic indeterminates.} Then, in the late 19th and early 20th centuries, work of Arthur Cayley \cite{Ca78} and Ruth Moufang \cite{Mo35}, among others, further established latin squares as important objects of pure mathematics by drawing connections between latin squares and several well-known geometric and algebraic structures. As indicated above, we are particularly interested in the connection between groups and latin squares demonstrated by Cayley: every finite group $G$ can be represented by the \defn{group-based} latin square $L_G$, with rows and columns are indexed by the elements of $G$ and the cell in row $g$ and column $h$ containing the symbol $gh$. Perhaps the central motivating conjecture for the study of latin squares in the early-to-mid twentieth century, however, goes all the way back to Euler; Euler's conjecture that there are no orthogonal latin squares of order $4n+2$ inspired a significant amount of work (see \cite[Section 5.1]{DenesKeedwellBook}) up until it was definitively disproven by Bose, Shrikhande, and Parker \cite{BSP60} in 1960. 
+The story of latin squares as an object of modern combinatorial mathematics begins with work of Leonard Euler from the late 18th century \cite{Euler} on a notion now known as orthogonality: two latin squares of order $n$ are said to be \defn{orthogonal} if the array one obtains by superimposing them contains each possible pair of symbols exactly once.\footnote{According to Andersen \cite[Ch. 11]{WW13}, the somewhat peculiar name ``latin square'' was introduced by Euler, who was using latin squares to construct magic squares---squares with integer entries wherein the sum of each row, column, and main diagonal is the same---and following the algebraic convention of using latin letters for algebraic indeterminates. Although the term graeco-latin square was later used to describe pairs of orthogonal latin squares, and this name was inspired by Euler's concurrent use of greek and latin letters to represent an orthogonal pair, Andersen states clearly \cite[p. 261]{WW13} that Euler, who introduced the term latin square, never used the term graeco-latin square.} Then, in the late 19th and early 20th centuries, work of Arthur Cayley \cite{Ca78} and Ruth Moufang \cite{Mo35}, among others, further established latin squares as important objects of pure mathematics by drawing connections between latin squares and several well-known geometric and algebraic structures. As indicated above, we are particularly interested in the connection between groups and latin squares demonstrated by Cayley: every finite group $G$ can be represented by a \defn{group-based} latin square $L_G$, with rows and columns indexed by the elements of $G$ and the entry in row $g$ and column $h$ containing the symbol $gh$. Perhaps the central motivating conjecture for the study of latin squares in the early-to-mid twentieth century, however, goes all the way back to Euler; Euler's conjecture that there are no orthogonal latin squares of order $4n+2$ inspired a significant amount of work (see \cite[Section 5.1]{DenesKeedwellBook}) up until it was definitively disproven by Bose, Shrikhande, and Parker \cite{BSP60} in 1960. 
 
 \begin{figure}[t]
 \centering
@@ -666,11 +668,11 @@ The story of latin squares as an object of modern combinatorial mathematics begi
 \caption{A pair of orthogonal latin squares of order 4.}\label{fig:orthogonal}
 \end{figure}
 
-Although we will not discuss orthogonal latin squares explicitly in what follows, their study is the source of the problems considered by this thesis. In particular, if $L_1$ and $L_2$ are orthogonal latin squares and $s \in S(L_2)$, then the set $T$ of cells in $L_1$ corresponding to the positions of cells with symbol $s$ in $L_2$ is a 1-plex (see Figure \ref{fig:orthogonal}). We will usually refer to 1-plexes by their more common, and much older, name: \defn{transversals}. The key observation to be made here is: for a latin square $L_1$ of order $n$, there is a latin square $L_2$ orthogonal to $L_1$ if and only if we can partition $L_1$ into $n$ disjoint transversals. While it was this connection to orthogonal latin squares that first inspired the study of transversals in latin squares \cite{Wa2011}, we will see shortly that the study of transversals and their various generalizations is a very rich topic in its own right. 
+Although we will not discuss orthogonal latin squares explicitly in what follows, their study is the source of the problems considered by this thesis. In particular, if $L_1$ and $L_2$ are orthogonal latin squares and $s \in S(L_2)$, then the set $T$ of entries in $L_1$ corresponding to the positions of entries with symbol $s$ in $L_2$ is a 1-plex (see Figure \ref{fig:orthogonal}). We will usually refer to 1-plexes by their more common, and much older, name: \defn{transversals}. The key observation to be made here is: for a latin square $L_1$ of order $n$, there is a latin square $L_2$ orthogonal to $L_1$ if and only if we can partition $L_1$ into $n$ disjoint transversals. While it was this connection to orthogonal latin squares that first inspired the study of transversals in latin squares \cite{Wa2011}, we will see shortly that the study of transversals and their various generalizations is a very rich topic in its own right. 
 
 \section{Transversals}\label{sec:introtransversal}
 
-Already present in the work of Euler \cite{Euler} was the implicit observation that, for every even integer $n$, there exists a latin square of order $n$ with no transversal. However, to this day there are no latin squares of odd order known to not have a transversal. It has now been over five decades since the mathematical community began trying to prove that this observed pattern extends to all latin squares of odd order. 
+Already present in the work of Euler \cite{Euler} was the implicit observation that, for every even integer $n$, there exists a latin square of order $n$ with no transversal. However, to this day, there are no latin squares of odd order known to not have a transversal. It has now been over five decades since the mathematical community began trying to prove that this observed pattern extends to all latin squares of odd order. 
 
 \begin{conjecture}[Ryser \cite{Ry67}]\label{conj:ryser}
 Every latin square of odd order has a transversal.
@@ -678,13 +680,13 @@ Every latin square of odd order has a transversal.
 
 Ryser may have made the stronger conjecture that the number of transversals in every latin square of order $n$ is congruent to $n$ modulo 2 (see \cite{BW18plus} for a discussion of what exactly Ryser may or may not have conjectured). Balasubramanian \cite{Ba90} provided a partial result in the direction of this stronger conjecture by showing that every latin square of even order has an even number of transversals. Unfortunately, it is not true that all latin squares of odd order have an odd number of transversals because, as was noted in e.g.\! \cite{BW18plus,CW05,Wa02}, there exist latin squares of order 7 with an even number of transversals. 
 
-Though there has been some very interesting recent work on the enumeration of transversals in latin squares \cite{DG18,EMM19,EMM20plus,GL16,Ta15}, because we are here interested in questions of existence we will leave an exploration of this topic (via the papers just cited) to the reader. One enumerative result, however, is worth discussing in this context. Although Conjecture \ref{conj:ryser} is concerned only with latin squares of odd order, and it is known that for all even $n$ there are at least $n^{n^{3/2}(1/2-o(1))}$ latin squares of order $n$ with no transversal \cite{CW17},  a landmark paper of Kwan \cite{Kw20} shows that almost every latin square has a transversal. More precisely, it is shown in \cite{Kw20} that the probability of a uniformly random latin square of order $n$ containing $\left((1-o(1))\frac{n}{e^2} \right)^n$ distinct transversals approaches 1 as $n$ approaches infinity. This is one of the most compelling pieces of positive evidence in support of Conjecture \ref{conj:ryser} known to date. 
+Though there has been some very interesting recent work on the enumeration of transversals in latin squares (see \cite{DG18,EMM19,EMM20plus,GL16,Ta15}), because we are here interested in questions of existence, we will leave an exploration of this topic (via the papers just cited) to the reader. One enumerative result, however, is worth discussing in this context. Although Conjecture \ref{conj:ryser} is concerned only with latin squares of odd order, and it is known that for all even $n$ there are at least $n^{n^{3/2}(1/2-o(1))}$ latin squares of order $n$ with no transversal \cite{CW17},  a landmark paper of Kwan \cite{Kw20} shows that almost every latin square has a transversal. More precisely, it is shown in \cite{Kw20} that the probability of a uniformly random latin square of order $n$ containing $\left((1-o(1))\frac{n}{e^2} \right)^n$ distinct transversals approaches 1 as $n$ approaches infinity. This is one of the most compelling pieces of positive evidence in support of Conjecture \ref{conj:ryser} known to date. 
 
-It is worth noting that some evidence indicating Conjecture \ref{conj:ryser} may not be true was given by Egan and Wanless in \cite{EW12}. In that paper, it was shown that for all odd $m \geq 3$, there exists a latin square  of order $3m$ which contains an $(m-1) \times m$ latin subrectangle all of whose cells are not in any transversal. Moreover, it is shown that, for all $n \geq 4$, there exists a latin square of order $n$ with at least 7 cells which do not appear in any transversal. Nonetheless, a preponderance of the currently available evidence seems to be in support of Conjecture \ref{conj:ryser}. 
+It is worth noting that some evidence indicating Conjecture \ref{conj:ryser} may not be true was given by Egan and Wanless in \cite{EW12}. In that paper, it was shown that for all odd $m \geq 3$, there exists a latin square  of order $3m$ which contains an $(m-1) \times m$ latin subrectangle all of whose entries are not in any transversal. Moreover, it is shown that, for all $n \geq 4$, there exists a latin square of order $n$ with at least 7 entries which do not appear in any transversal. Nonetheless, a preponderance of the currently available evidence seems to be in support of Conjecture \ref{conj:ryser}. 
 
 \section{Partial transversals}
 
-Much of the work towards Conjecture \ref{conj:ryser} has considered the slightly weaker notion of \defn{partial transversals}, or collections of cells which intersect each row and column at most once and contain at most one copy of each symbol. There is a growing body of literature studying when partial transversals are properly contained in larger partial transversals \cite{BMSW19,CHN09,Ev19,EMW21,Gr03}, and there have been several papers considering decompositions of latin squares into disjoint partial transversals \cite{BGMM16,CK15,GHM19,Na20}. In this thesis, though, we are most interested in partial transversals of maximum size. 
+Much of the work towards Conjecture \ref{conj:ryser} has considered the slightly weaker notion of \defn{partial transversals}, or collections of entries which intersect each row and column at most once and contain at most one copy of each symbol. There is a growing body of literature studying when partial transversals are properly contained in larger partial transversals \cite{BMSW19,CHN09,Ev19,EMW21,Gr03}, and there have been several papers considering decompositions of latin squares into disjoint partial transversals \cite{BGMM16,CK15,GHM19,Na20}. In this thesis, though, we are most interested in partial transversals of maximum size. 
 
 Over the years, a series of papers has provided increasing bounds on the size of partial transversals which must exist in every latin square. Picking up the story partway through, it was shown concurrently and independently by  Brouwer et al. \cite{BVW78} and Woolbright \cite{Wo78} that every latin square of order $n$ has a partial transversal of size at least $n-\sqrt{n}$. After a couple of erroneous claimed improvements,  Hatami and Shor \cite{HS08} were then able to improve the bound to $n-11.053\log^2 n$. The currently best known bound is due to Keevash et al. \cite{KPSY20plus}, who showed that every latin square of order $n$ has a partial transversal of size $n-O\left(\frac{\log n}{\log \log n}\right)$. Given that not all latin squares have a transversal, one may wonder how close to $n$ this bound will get. Referring to a partial transversal of size $n-1$ as a \defn{near transversal}, we now arrive at the first of the three main motivating conjectures for this thesis. 
 
@@ -694,23 +696,23 @@ Every latin square has a near transversal.
 
 An even stronger conjecture concerning the minimum covering radius (with respect to Hamming distance) of a set of permutations, and the progress towards that conjecture \cite{CW05,WZ13,HW20}, is worth noting. Nonetheless, we will here focus on Brualdi's conjecture as stated. In Chapter \ref{ch:jcd} we will prove that the conjecture holds for all group-based latin squares. Further evidence for this conjecture was recently given by Best et al. \cite{BPW21}, who confirmed that Conjecture \ref{conj:brualdi} holds for all latin squares of order at most 11.  However, there has been recent work indicating that Brualdi's conjecture may not be true.
 
-Conjecture \ref{conj:brualdi} has often been attributed to Stein---and is often stated alongside Conjecture \ref{conj:ryser} as the Ryser-Brualdi-Stein conjecture (see e.g. \cite{GH20, KPSY20plus, MPS19})---but the oft-cited paper of Stein makes only the stronger conjecture that every \defn{equi-$n$ square}, i.e.\! every $n \times n$ array in which each symbol in $[n]$ appears $n$ times, has a near transversal. This distinction is worth noting because Stein's conjecture was recently shown to be false when Pokrovskiy and Sudakov \cite{PS19} constructed equi-$n$ squares with no partial transversal of size greater than $n-\frac{1}{42}\log n$ for all $n \geq e^{120}$. When combined with Aharoni et al.'s \cite{ABKZ17} proof that every equi-$n$ square has a partial transversal of size at least $\frac{2}{3}n$, this work raises the interesting question of whether every equi-$n$ square has a partial transversal of size $n-o(n)$. It is shown in \cite{PS19} that this question has a positive answer under the additional assumption that no symbol appears too many times in any row or column. It is also known \cite{PS13} that almost every equi-$n$ square has a transversal. 
+Conjecture \ref{conj:brualdi} has often been attributed to Stein---and is often stated alongside Conjecture \ref{conj:ryser} as the Ryser-Brualdi-Stein conjecture (see e.g. \cite{GH20, KPSY20plus, MPS19})---but the oft-cited paper of Stein makes only the stronger conjecture that every \defn{equi-$n$ square}, i.e.\! an $n \times n$ array in which each symbol in $[n]$ appears $n$ times, has a near transversal. This distinction is worth noting because Stein's conjecture was recently shown to be false when Pokrovskiy and Sudakov \cite{PS19} constructed equi-$n$ squares with no partial transversal of size greater than $n-\frac{1}{42}\log n$ for all $n \geq e^{120}$. When combined with Aharoni et al.'s \cite{ABKZ17} proof that every equi-$n$ square has a partial transversal of size at least $\frac{2}{3}n$, this work raises the interesting question of whether every equi-$n$ square has a partial transversal of size $n-o(n)$. It is shown in \cite{PS19} that this question has a positive answer under the additional assumption that no symbol appears too many times in any row or column. It is also known \cite{PS13} that almost every equi-$n$ square has a transversal. 
 
 \section{Generalizations of latin squares}
 
 Equi-$n$ squares are just one of many generalizations of latin squares whose partial transversals have been extensively studied. They can be naturally generalized to what we call \defn{$k$-bounded $n$-squares}, which are $n \times n$ arrays in which no symbol appears more than $k$ times. A famous paper of Erd\H{o}s and Spencer \cite{ES91} shows that all $\frac{n-1}{4e}$-bounded $n$-squares have a transversal. This was later improved upon by Biasscot et al. \cite{BFPS11}, who showed that every $\frac{27n}{256}$-bounded $n$-square has a transversal, and Perarnau and Serra \cite{PS13}, who gave an asymptotically precise enumeration of the transversals in $\frac{n}{10.93}$-bounded $n$-squares. We will study $k$-bounded $n$-squares below in Section \ref{sec:LLLL}.
 
-The spirit of latin squares is perhaps better retained by considering arrays with various ``latin'' properties. A rectangular array is referred to as \defn{row-latin} (respectively \defn{column-latin}) if no symbol appears more than once in any row (resp. column). An array which is both row-latin and column-latin is often called a \defn{latin array}. In $m \times n$ arrays with $m \neq n$, the term transversal is used for partial transversals of size $\min\{m,n\}$. Transversals in such latin arrays are well-understood. Drisko \cite{Dr98} showed that, whenever $m \geq 2n-1$, every $m \times n$ row-latin rectangle has a \gls{transversal} and provided examples showing that the given lower bound on $m$ is tight. It is worth noting that Drisko's proof of the lower bound depends upon columns containing many copies of the same symbol. When we restrict to arrays which are also column-latin, H\"{a}ggkvist and Johansson showed that all $(n+o(n)) \times n$ latin arrays can be decomposed into disjoint transversals, and there have subsequently been several further, graph-theoretic strengthenings of these results \cite{ACH15,AKZ17,Po17,Po18}.
+The spirit of latin squares is perhaps better retained by considering arrays with various ``latin'' properties. A rectangular array is referred to as \defn{row-latin} (respectively \defn{column-latin}) if no symbol appears more than once in any row (resp. column). An array that is both row-latin and column-latin is often called a \defn{latin array}. In $m \times n$ arrays with $m \neq n$, the term transversal is used for partial transversals of size $\min\{m,n\}$. Transversals in such latin arrays are well-understood. Drisko \cite{Dr98} showed that, whenever $m \geq 2n-1$, every $m \times n$ row-latin rectangle has a \gls{transversal} and provided examples showing that the given lower bound on $m$ is tight. It is worth noting that Drisko's proof of the lower bound depends upon columns containing many copies of the same symbol. When we restrict to arrays which are also column-latin, H\"{a}ggkvist and Johansson showed that all $(n+o(n)) \times n$ latin arrays can be decomposed into disjoint transversals, and there have subsequently been several further, graph-theoretic strengthenings of these results \cite{ACH15,AKZ17,Po17,Po18}.
 
 There has also been much recent work on transversals in square latin arrays (which are more general than latin squares in that they may contain more than $n$ symbols). Inspired by a conjecture of Akbari and Alipour \cite{AA04} that every $n \times n$ latin array with at least $\frac{n^2}{2}$ distinct symbols contains a transversal, Best et al. \cite{BHWWW18} showed that every \gls{square latin array} containing at least $(2-\sqrt{2})n^2$ symbols has a transversal. Akbari and Alipour's conjecture was subsequently proven for sufficiently large $n$ concurrently and independently by Keevash and Yepremyan \cite{KY20}, who proved the stronger result that $n^{399/200}$ symbols suffice for large $n$, and by Montgomery et al. \cite{MPS19}. 
 
-The proof of the sufficiently large version of this conjecture by Montgomery et al. was only a small portion of  a wide-ranging paper; the main result of \cite{MPS19} is also of significant interest here: every $n \times n$ latin array in which at most $n-o(n)$ symbols occur more than $n-o(n)$ times has $n-o(n)$ disjoint transversals. An alternative proof of this result was given by Ehard et al. \cite{EGJ20}, and a proof of a similar result (where all symbols must occur at most $n-o(n)$ times in the array but rows and columns can contain up to $o(n/\log^2 n)$ copies of a given symbol) was given by Kim et al. in \cite{KKKO20}. These results concerning many disjoint transversals in latin arrays are especially interesting to us because they imply the existence $k$-plexes, a type of generalized transversal defined above which will play an important role throughout this thesis. 
+The proof of the sufficiently large version of this conjecture by Montgomery et al. was only a small portion of  a wide-ranging paper; the main result of \cite{MPS19} is also of significant interest here: every $n \times n$ latin array in which at most $n-o(n)$ symbols occur more than $n-o(n)$ times has $n-o(n)$ disjoint transversals. An alternative proof of this result was given by Ehard et al. \cite{EGJ20}, and a proof of a similar result (where all symbols must occur at most $n-o(n)$ times in the array but rows and columns can contain up to $o(n/\log^2 n)$ copies of a given symbol) was given by Kim et al. in \cite{KKKO20}. These results concerning many disjoint transversals in latin arrays are especially interesting to us because they imply the existence of $k$-plexes, a type of generalized transversal defined above which will play an important role throughout this thesis. 
 
 
 
-\section{Plexes}
+\section{Plexes}\label{sec:introplex}
 
-Generalizing the definition given in the second paragraph of this thesis, we define a \defn{$k$-plex} in an $n \times n$ array to be a collection of cells which intersects each row and each column exactly $k$ times and contains at most $k$ copies of each symbol. The term ``$k$-plex''  was introduced fairly recently, by Wanless  \cite{Wa02} in 2002, although it was noted in \cite{Wa02} that $2$, $3$, and $4$-plexes have been discussed in the statistical literature for many decades. The study of $k$-plexes as combinatorial objects has been around since at least the mid-90s when, according to Dougherty \cite{Do96}, our second main motivating conjecture was given---though never published---by the late Peter Rodney.
+Generalizing the definition given in the second paragraph of this thesis, we define a \defn{$k$-plex} in an $n \times n$ array to be a collection of entries which intersects each row and each column $k$ times and contains $k$ copies of each symbol in some $n$-subset of the array's symbols. The term ``$k$-plex''  was introduced fairly recently, by Wanless  \cite{Wa02} in 2002, although it was noted in \cite{Wa02} that $2$, $3$, and $4$-plexes have been discussed in the statistical literature for many decades. The study of $k$-plexes as combinatorial objects has been around since at least the mid-90s when, according to Dougherty \cite{Do96}, our second main motivating conjecture was given---though never published---by the late Peter Rodney.
 
 \begin{conjecture}[Rodney]
 Every latin square has a 2-plex. 
@@ -718,7 +720,7 @@ Every latin square has a 2-plex.
 
 Mirroring the current status of Brualdi's conjecture, Rodney's conjecture was shown to hold for groups by Vaughan-Lee and Wanless \cite{VLW03}, and is known to hold for all latin squares of order at most 9 \cite{EW11}. For general latin squares, a weaker, weighted version of Conjecture \ref{conj:rodney}, as well as Conjecture \ref{conj:ryser}, was proven by Pula \cite{Pu11}. 
 
-While the attribution of Conjecture \ref{conj:rodney} to Rodney is well-established (appearing as such in the fairly authoritative Handbook of Combinatorial Designs \cite[p. 143]{HandbookOfDesigns}), Dougherty actually attributes to Rodney the stronger conjecture \cite[p. 130]{Do96} that every latin square can be partitioned into disjoint 2-plexes with an additional transversal left over for latin squares of odd order. Notice that the union of an $a$-plex and a $b$-plex forms an $a+b$-plex. Combining this observation with the stronger conjecture of Rodney, we obtain the third main motivating conjecture in this thesis. 
+While the attribution of Conjecture \ref{conj:rodney} to Rodney is well-established (appearing as such in the fairly authoritative Handbook of Combinatorial Designs \cite[p. 143]{HandbookOfDesigns}), Dougherty actually attributes to Rodney the stronger conjecture \cite[p. 130]{Do96} that every latin square can be partitioned into disjoint 2-plexes with an additional transversal left over for latin squares of odd order. Notice that the union of an $a$-plex and a disjoint $b$-plex forms an $(a+b)$-plex. Combining this observation with the stronger conjecture of Rodney, we obtain the third main motivating conjecture in this thesis. 
 
 \begin{conjecture}
 For all even $k \leq n$, every latin square of order $n$ has a $k$-plex.
@@ -726,14 +728,18 @@ For all even $k \leq n$, every latin square of order $n$ has a $k$-plex.
 
   Although Conjecture \ref{conj:wanless} is also due to Rodney, we will use the name ``Rodney's conjecture'' only to refer to Conjecture \ref{conj:rodney}. Wanless showed that Conjecture \ref{conj:wanless} holds for group-based latin squares in \cite{Wa02}. Moreover, the computation in \cite{EW11}, cited above as confirming Rodney's conjecture, was in fact a confirmation that all latin squares of order at most 9 have $\lfloor n/2\rfloor$ disjoint 2-plexes. Thus, it also known that all latin squares of order $n \leq 9$ have a $k$-plex for every even $k \leq n$. 
   
-When $k$ is odd and $n$ is even, there does not seem to be any consistent pattern concerning the existence of $k$-plexes in latin squares of order $n$. Indeed, for every positive even integer $n$, Egan and Wanless \cite{EW08} constructed a latin square of order $n$ that has a $k$-plex for every even value of $k$ between$ \lfloor n/4 \rfloor$ and $ \lceil 3n/4 \rceil$ but no $k$-plex for any value of $k$ outside that range. Furthermore, Cavenagh and Wanless \cite{CW17} have shown that, for all even $n > 4$, there is a latin square of order $n$ which contains a 3-plex but no transversal. An interesting question which was raised by both of these papers but remains unanswered is whether there exists a latin square with an $a$-plex and a $c$-plex but no $b$-plex for odd integers $a<b<c$. 
+When $k$ is odd and $n$ is even, there does not seem to be any consistent pattern concerning the existence of $k$-plexes in latin squares of order $n$. Indeed, for every positive even integer $n$, Egan and Wanless \cite{EW08} constructed a latin square of order $n$ that has a $k$-plex for every odd value of $k$ between$ \lfloor n/4 \rfloor$ and $ \lceil 3n/4 \rceil$ but no $k$-plex for any odd number $k$ outside that range. Furthermore, Cavenagh and Wanless \cite{CW17} have shown that, for all even $n > 4$, there is a latin square of order $n$ which contains a 3-plex but no transversal. An interesting question which was raised by both of these papers, but remains unanswered, is whether there exists a latin square with an $a$-plex and a $c$-plex but no $b$-plex for odd integers $a<b<c$. 
 
 There have also been several papers \cite{BEMW09,Eg11,EW11} studying \defn{indivisible plexes}, or $k$-plexes which do not contain an $\ell$-plex for any positive integer $\ell <k$, and others \cite{BKLOT17, CKW14, DH84, St20, Wa02} treating $k$-plexes as a primary object which may or may not be embeddable in a latin square. We refer the reader to \cite{BCGG19} for an interesting description of plexes in the language of spectral graph theory, and \cite{Li12} for a weaker form of orthogonality stated in terms of $k$-plexes. 
 
-In this thesis we coin the term \defn{$(k,\ell)$-plex} to describe a collection of cells in a square array which intersects each row and column exactly $k$ times and contains at most $\ell$ copies of each symbol. Although this term does not seem to have appeared previously in the literature, there have been at least three papers which considered $(1,2)$-plexes. Cameron and Wanless \cite[Prop.\! 7]{CW05} were the first to show that every latin square has a $(1,2)$-plex. This result has since been extended by Aharoni et al. \cite[Theorem 1.16]{ABKZ18}, who showed that every $n \times n$ \gls{row-latin array} with exactly $n$ symbols has a $(1,2)$-plex, and Best et al. \cite[Lemma 13]{BPW21}, who showed that every entry in every latin square is contained in a $(1,2)$-plex. 
+In this thesis we coin the term \defn{$(k,\ell)$-plex} to describe a collection of entries in a square array which intersects each row and column exactly $k$ times and contains at most $\ell$ copies of each symbol. Notice that, in an $n \times n$ array containing exactly $n$ symbols---so, in particular, in a latin square---a $(k,k)$-plex is always a $k$-plex, while this is not the case in arrays with more than $n$ symbols. Although the term ``$(k,\ell)$-plex'' term does not seem to have appeared previously in the literature, there have been at least three papers which considered $(1,2)$-plexes. Cameron and Wanless \cite[Prop.\! 7]{CW05} were the first to show that every latin square has a $(1,2)$-plex. This result has since been extended by Aharoni et al. \cite[Theorem 1.16]{ABKZ18}, who showed that every $n \times n$ \gls{row-latin array} with exactly $n$ symbols has a $(1,2)$-plex, and Best et al. \cite[Lemma 13]{BPW21}, who showed that every entry in every latin square is contained in a $(1,2)$-plex. 
 
-In Chapter \ref{ch:varplex}, we initiate the study of $(k,\ell)$-plexes for $k >1$. In particular, we show that every latin square has a $(k,4k)$-plex for all $k \leq \frac{n}{4}$ and every sufficiently large latin square has a $(k,k+1)$-plex for $k = O(1)$. We also raise several questions concerning $(k,\ell)$-plexes---most of which are weaker versions of Conjecture \ref{conj:wanless}---in Chapter \ref{ch:conc}. 
 
+Ian Wanless has also pointed out that, though not part of the published literature,  the PhD thesis of Kyle Pula \cite{PulaThesis} discusses a closely related notion. Pula defined a \defn{weak $k$-plex} in a latin square as a collection of entries which intersects each row and column exactly $k$ times and contains between $k-1$ and $k+1$ copies of each symbol. Notice that a weak $k$-plex is a $(k,k+1)$-plex in which each symbol appears at least $k-1$ times. Pula proved that every latin square has a weak $2$-plex and sketched a proof that every sufficiently large latin square has a weak $k$-plex when $k=O(1)$.  Moreover, in discussing collections of disjoint weak 1-plexes, Pula showed that every latin square of order $n \geq 73$ has a $(k,2k)$-plex for all $k \leq \left\lceil \frac{1}{11}n-\frac{8}{11}\sqrt{n}-\frac{3}{11}\right\rceil$. Because we were unaware of Pula's work until the defence of this thesis, we will often work in parallel to, rather than building upon, the results just mentioned.
+
+
+
+This thesis' work on $(k,\ell)$-plexes will appear in Chapter \ref{ch:varplex}. We show that every latin square has a $(k,4k)$-plex for all $k \leq \frac{n}{4}$ and every sufficiently large latin square has a $(k,k+1)$-plex for $k = O(1)$.  Notice that the second of these results follows from Pula's result on the existence of weak $k$-plexes. Nonetheless, we offer a novel proof of our weaker result. We also demonstrate the existence of several special families of $(2,\ell)$-plexes to be introduced in the next section. Finally, in Chapter \ref{ch:conc}, w eraise several questions concerning $(k,\ell)$-plexes---most of which are weaker versions of Conjecture \ref{conj:wanless}. 
 
 
 
@@ -805,12 +811,12 @@ A significant portion of the work in this thesis is given in the language of gra
 
 \end{tikzpicture} 
 \end{subfigure}
-\caption[A latin square graph of order 3]{A latin square $L$ and its associated latin square graph $\Gamma(L)$. The cells of a transversal are highlighted, as are the vertices of the corresponding independent set.}\label{fig:lsg}
+\caption[A latin square graph of order 3]{A latin square $L$ and its associated latin square graph $\Gamma(L)$. The entries of a transversal are highlighted, as are the vertices of the corresponding independent set.}\label{fig:lsg}
 \end{figure}
 
 Given a latin square $L$, we write $R(L)$ for its set of rows, $C(L)$ for its set of columns, and $L_{r,c}$ for the symbol in row $r$ and column $c$. The \defn{latin square graph} $\Gamma(L)$ is defined on the vertex set $R(L) \times C(L)$ with $(r,c) \sim (s,d)$ if and only if one of $r=s$, $c=d$, or $L_{r,c} = L_{s,d}$ holds. Figure \ref{fig:lsg} contains an example of this construction. Latin square graphs were introduced by  Bose \cite{Bose1963} in the 1960s as an example of nontrivial strongly regular graphs. They have attracted attention from researchers (e.g.\! \cite{BCGG19, CD09, PGSK21,PPT21}) interested in strictly graph-theoretic questions as an interesting family of symmetric graphs. They have also been utilized as a tool in the study of latin squares \cite{BGMM16,FS17,GHM19}. We will use them in Chapter \ref{ch:jcd} to prove that Brualdi's conjecture is true for group-based latin squares, utilizing the crucial observation that partial transversals in $L$ correspond to independent sets, i.e.\! sets of vertices no two of which are adjacent, in $\Gamma(L)$.
 
-A much more common way of graph-theoretically representing latin squares is as edge-colorings of a balanced complete bipartite graph. Given a latin square $L$ of order $n$, we define $K_{n,n}(L)$ to be the proper $n$-edge-colored copy of $K_{n,n}$ such that: the vertex \gls{bipartition} is labeled by \acrshort{RL}$= \{r_1,r_2,\ldots,r_n\}$ and \acrshort{CL}$=\{c_1,c_2,\ldots,c_n\}$, respectively,  and the edge $r_ic_j$ is colored by the symbol $L_{i,j}$. We also write $\chi_L:E(K_{n,n}) \rightarrow S(L)$ to denote the edge-coloring of $K_{n,n}(L)$. See Figure \ref{fig:KnnL} for an example of this construction. This representation of latin squares has been profitably used to study uniquely completable partial latin squares \cite{BurgessKeedwell2001,Keedwell1994,Mahmoodianetal1997}, to study partial transversals in latin squares  \cite{ABKZ18, CP19,MPS19}, and to construct latin squares with nice symmetry properties \cite{Schroeder2019,Wanless1999,WanlessIhrig2005}. Notice that we can similarly construct an edge-coloring of $K_{n,n}$ using any $n \times n$ array; we will consider $K_{n,n}(S)$, where $S$ is a $k$-bounded $n$-square, in Section \ref{sec:LLLL}. 
+A much more common way of graph-theoretically representing latin squares is as edge-colorings of a balanced complete bipartite graph. Given a latin square $L$ of order $n$, we define $K_{n,n}(L)$ to be the proper $n$-edge-colored copy of $K_{n,n}$ such that: the vertex \gls{bipartition} is labeled by \acrshort{RL}$= \{r_1,r_2,\ldots,r_n\}$ and \acrshort{CL}$=\{c_1,c_2,\ldots,c_n\}$,  and the edge $r_ic_j$ is colored by the symbol $L_{i,j}$. We also write $\chi_L:E(K_{n,n}) \rightarrow S(L)$ to denote the edge-coloring of $K_{n,n}(L)$. See Figure \ref{fig:KnnL} for an example of this construction. This representation of latin squares has been profitably used to study uniquely completable partial latin squares \cite{BurgessKeedwell2001,Keedwell1994,Mahmoodianetal1997}, to study partial transversals in latin squares  \cite{ABKZ18, CP19,MPS19}, and to construct latin squares with nice symmetry properties \cite{Schroeder2019,Wanless1999,WanlessIhrig2005}. Notice that we can similarly construct an edge-coloring of $K_{n,n}$ using any $n \times n$ array; we will consider $K_{n,n}(S)$, where $S$ is a $k$-bounded $n$-square, in Section \ref{sec:LLLL}. 
 
 \begin{figure}[h]
 \centering
@@ -876,11 +882,18 @@ A much more common way of graph-theoretically representing latin squares is as e
 \end{figure}
 
 
-Harary \cite{Ha60} was the first to point out the connection between partial transversals in latin squares and rainbow matchings, i.e.\! matchings containing at most one copy of each color, in proper $n$-edge-colorings of $K_{n,n}$. In Chapters \ref{ch:h2terrace} and \ref{ch:varplex} we will make use of an extension of this observation. We say that an edge-colored graph is \defn{$k$-bounded} if it contains at most $k$ edges of each color (1-bounded graphs are more commonly referred to as \defn{rainbow} graphs).  Following Harary, we observe that $k$-plexes in $L$ are equivalent to $k$-regular $k$-bounded spanning subgraphs of $K_{n,n}(L)$. In a slight abuse of terminology, we will also refer to such subgraphs in edge-colorings of $K_{n,n}$ as $k$-plexes.
+Harary \cite{Ha60} was the first to point out the connection between partial transversals in latin squares and rainbow matchings, i.e.\! matchings containing at most one copy of each color, in proper $n$-edge-colorings of $K_{n,n}$. In Chapters \ref{ch:h2terrace} and \ref{ch:varplex} we will make use of an extension of this observation. We say that an edge-colored graph is \defn{$k$-bounded} if it contains at most $k$ edges of each color (1-bounded graphs are more commonly referred to as \defn{rainbow} graphs).  Following Harary, we observe that $k$-plexes in (a latin square) $L$ are equivalent to $k$-regular $k$-bounded spanning subgraphs of $K_{n,n}(L)$. In a slight abuse of terminology, we will also refer to such subgraphs in edge-colorings of $K_{n,n}$ as $k$-plexes.
 
-We may use the two graph-theoretic representations of latin squares just introduced to define two important types of symmetry. We say that two latin squares $L_1$ and $L_2$ are \defn{main class equivalent} if $\Gamma(L_1) \cong \Gamma(L_2)$. Notice that, if $L_1$ and $L_2$ are main class equivalent, then there is bijective correspondence between the partial transversals in $L_1$ and the partial transversals in $L_2$---namely, they both correspond to the independent sets of $\Gamma(L_1)$. A \defn{main class} of latin squares is a maximal collection of main class equivalent latin squares. When we discuss partial transversals in what follows, we will not distinguish between latin squares in the same main class.
+\section{Main classes and isotopies}
 
-Assuming $|L_1|=|L_2|=n$, we say that $L_1$ and $L_2$ are \defn{isotopic} if there is an automorphism of $K_{n,n}$ that maps each color class of $K_{n,n}(L_1)$ to a color class of $K_{n,n}(L_2)$. Notice that isotopic latin squares are main class equivalent, but one can find two latin squares in the same main class which are not isotopic (see e.g. \cite[Chapter 1]{DenesKeedwellBook}). Moreover, if $L_1$ and $L_2$ are isotopic, then the $k$-plexes of $L_1$ and the $k$-plexes of $L_2$ induce the same collection of edge-colored graphs (up to graph isomorphism). We refer to a maximal collection of isotopic latin squares as an \defn{isotopy class}. When discussing $k$-plexes in what follows, we will not distinguish between isotopic latin squares.
+We may use the graph-theoretic representations introduced in the previous section to define two important notions of equivalence for latin squares. First, we say that two latin squares $L_1$ and $L_2$ are \defn{main class equivalent} if $\Gamma(L_1) \cong \Gamma(L_2)$; the graph isomorphism between $\Gamma(L_1)$ and $\Gamma(L_2)$ is known as a \defn{main class automorphism}. Notice that, if $L_1$ and $L_2$ are main class equivalent, then there is bijective correspondence between the partial transversals in $L_1$ and the partial transversals in $L_2$---namely, they both correspond to the independent sets of $\Gamma(L_1)$. A \defn{main class} of latin squares is a maximal collection of main class equivalent latin squares. When we discuss partial transversals in what follows, we will not distinguish between latin squares in the same main class.
+
+Second, we say that two latin squares $L_1$ and $L_2$ satisfying $|L_1|=|L_2|=n$ are \defn{isotopic} if there is an automorphism of $K_{n,n}$ that fixes the vertex bipartition and maps each color class of $K_{n,n}(L_1)$ to a color class of $K_{n,n}(L_2)$; such an automorphism is known as an \defn{isotopy}. Notice that two latin squares may be isotopic even when they contain distinct sets of symbols. Moreover, isotopic latin squares are main class equivalent. However, one can find two latin squares in the same main class which are not isotopic (see e.g. \cite[Chapter 1]{DenesKeedwellBook}). We refer to a maximal collection of isotopic latin squares as an \defn{isotopy class}.
+
+ In what follows, we will consider only properties of latin squares which are invariant under isotopy. Indeed, if $L_1$ and $L_2$ are isotopic, then the $k$-plexes of $L_1$ and the $k$-plexes of $L_2$ induce the same collection of edge-colored graphs (up to graph isomorphism). Therefore, we will treat isotopic latin squares as equivalent, and we may choose to reorder rows and columns without fundamentally changing the latin square being discussed.
+
+Properly introducing the notion of isotopy allows us to state more clearly what we mean by the group-based latin square $L_G$. When defining group-based latin squares above, we avoided mentioning that the layout of $L_G$ depends upon an ordering of the elements of $G$. This omission can be justified by the fact that we will only be considering properties of latin squares which are invariant under isotopy. Nonetheless, it is worth formally defining the \defn{Cayley table} of $G$ with respect to the ordering $G=\{g_1,g_2,\ldots,g_n\}$ as the unique latin square satisfying $L_{i.j}=g_k$ if and only if $g_k = g_ig_j$.  Then, following \cite{EvansBook}, we refer to a latin square as \defn{group-based} if it is isotopic to a Cayley table. It is known that, if $L$ is a group-based latin square, then $L$ is isotopic to the Cayley tables of exactly one group (see \cite[p. 13]{DenesKeedwellBook}). Moreover, if a group-baed latin square $L$ is main equivalent to some other latin square $L'$, then $L$ and $L'$ are in fact isotopic (see \cite[p. 126]{DenesKeedwellBook}). Therefore, we will write $L_G$ to denote the latin square based on the group $G$ with no possibility of confusion.
+
 
 \section{This thesis's novel conjecture}\label{sec:introconj}
 
@@ -900,16 +913,16 @@ Assuming $|L_1|=|L_2|=n$, we say that $L_1$ and $L_2$ are \defn{isotopic} if the
 
 
 
-We noted above that 2-plexes in the latin square $L$ correspond to 2-regular 2-bounded spanning subgraphs of $K_{n,n}(L)$. Perhaps the most famous type of 2-regular spanning subgraph of a graph $G$ is the \defn{Hamilton cycle}, which is a cycle containing every vertex of $G$. We define a \defn{Hamilton $(2,\ell)$-plex} in a square array $S$ as an $\ell$-bounded Hamilton cycle in $K_{n,n}(S)$; in the case $\ell=2$ we simply use the term \defn{Hamilton 2-plex}. The first main contribution of this thesis is the following novel strengthening of Rodney's conjecture.
+We noted above that 2-plexes in the latin square $L$ correspond to 2-regular 2-bounded spanning subgraphs of $K_{n,n}(L)$. Perhaps the most famous type of 2-regular spanning subgraph of a graph $G$ is the \defn{Hamilton cycle}, which is a cycle containing every vertex of $G$. We define a \defn{Hamilton $(2,\ell)$-plex} in a square array $S$ as an $\ell$-bounded Hamilton cycle in $K_{n,n}(S)$; in the case $\ell=2$ and $L$ has $n$ symbols, we simply use the term \defn{Hamilton 2-plex}. The first main contribution of this thesis is the following novel strengthening of Rodney's conjecture.
 
 
 \begin{conjecture}\label{conj:main}
 Every latin square of order $n \geq 5$ has a Hamilton 2-plex. 
 \end{conjecture}
 
-The condition $n \geq 5$ in Conjecture \ref{conj:main} is necessary because there is a latin square of order 4 which does not have a Hamilton 2-plex. Indeed, we have shown this latin square in Figure \ref{fig:KnnL}. It is also straightforward to check that this latin square is main-class equivalent to $L_{\mathbb{Z}_2\times\mathbb{Z}_2}$. We believe that this is the only latin square which does not have a Hamilton 2-plex, and we have confirmed this for all latin squares of order at most 8.
+The condition $n \geq 5$ in Conjecture \ref{conj:main} is necessary because there is a latin square of order 4 which does not have a Hamilton 2-plex. Indeed, we have shown this latin square in Figure \ref{fig:KnnL}. It is also straightforward to check that this latin square is isotopic to $L_{\mathbb{Z}_2\times\mathbb{Z}_2}$. We believe that this is the only latin square which does not have a Hamilton 2-plex, and we have confirmed this for all latin squares of order at most 8.
 
-%which may be represented in the block form $\begin{pmatrix} A & B \\B'&A' \end{pmatrix}$. Let $P$ be a 2-plex of $L$. Notice that $P$ must contain exactly two cells from $A$, as otherwise it will not be possible for $P$ to have two copies of symbol 3 and two copies of the symbol 4. If the two cells in $P \cap A$ are in the same row, then the t
+%which may be represented in the block form $\begin{pmatrix} A & B \\B'&A' \end{pmatrix}$. Let $P$ be a 2-plex of $L$. Notice that $P$ must contain exactly two entries from $A$, as otherwise it will not be possible for $P$ to have two copies of symbol 3 and two copies of the symbol 4. If the two entries in $P \cap A$ are in the same row, then the t
 
 \begin{proposition}\label{prop:upto8}
 Every latin square of order at most 8, besides $L_{\mathbb{Z}_2\times \mathbb{Z}_2}$, has a Hamilton 2-plex.
@@ -919,7 +932,7 @@ We do not present a formal proof of this proposition here, but we refer the read
 %
 \[\text{\url{https://sites.google.com/view/kevinhalasz/combinatorial-data}}\]
 %
-for the exhaustive data which establish the result. These data comes in the form of three documents: for each $n \in [6,8]$, we give a collection of lists of ordered triples corresponding to the cells of a Hamilton 2-plex in a representative of each \gls{isotopy class} of order $n$ latin squares. We use the \gls{isotopy class} representatives given by McKay in \cite{McKayPage}, and the ordering of the lists in our data corresponds to McKay's ordering. As noted in \cite[Sec. 4.2]{DenesKeedwellBook}, there is exactly one isotopy class of order at most 5 which does not contain a latin square based upon an abelian group. We give a Hamilton 2-plex for that square in Figure \ref{fig:prop5}, and we prove that all latin squares based on abelian groups have Hamilton 2-plexes in Section \ref{sec:h2abel} below.
+for the exhaustive data which establish the result. These data come in the form of three documents: for each $n \in [6,8]$, we give a collection of lists of ordered triples corresponding to the entries of a Hamilton 2-plex in a representative of each \gls{isotopy class} of order $n$ latin squares. We use the \gls{isotopy class} representatives given by McKay in \cite{McKayPage}, and the ordering of the lists in our data corresponds to McKay's ordering. As noted in \cite[Sec. 4.2]{DenesKeedwellBook}, there is exactly one isotopy class of order at most 5 which does not contain a latin square based upon an abelian group. We give a Hamilton 2-plex for that square in Figure \ref{fig:prop5}, and we prove that all latin squares based on abelian groups have Hamilton 2-plexes in Section \ref{sec:h2abel} below.
 
 \begin{figure}[h]
 \centering
@@ -941,26 +954,31 @@ The idea of considering Hamilton 2-plexes in latin squares was motivated by the 
 
 Andersen then conjectured that every proper edge-coloring of $K_n$ has a rainbow path of length $n-2$, noting that Maamoun and Meyniel \cite{MM84} had constructed edge-colorings of $K_n$ with no rainbow path of length $n-1$ whenever $n$ is a power of 2. As described in the introduction of \cite{APS17}, there was a series of papers working towards this conjecture, with various authors proving the existence of rainbow paths of length $\alpha n$ for increasing constants $\alpha <1$. A breakthrough paper of Alon et al. \cite{APS17} showed that every proper edge-coloring of $K_n$ has a rainbow path of length $n-O(n^{3/4})$, and this was quickly improved using similar methods to $n-O(n^{1/2}\log n)$ by Balogh and Molla \cite{BM19}. It has also been shown by Gould et al. \cite{GKKO20plus} that almost every optimal (where the definition of optimal depends on the parity of $n$) proper edge-coloring of $K_n$ has a rainbow Hamilton path, and by Albert et al. \cite{AFR95} that every $\frac{n}{64}$-bounded proper edge-coloring of $K_n$ has a rainbow Hamilton cycle.
 
-The final colored-graph representation of latin squares is worth discussing. One can associate with a latin square $L$ an arc-coloring of the complete directed graph $\overrightarrow{K}_n$ by giving the edge $v_iv_j$ the color $L_{i,j}$. Writing $\overrightarrow{K}_n(L)$ for this coloring, notice that partial transversals in $L$ correspond to rainbow subgraphs of $\overrightarrow{K}_n(L)$ with maximum in-degree and maximum out-degree 1. The original motivation for considering Hamilton 2-plexes was a paper of Gy\'{a}rf\'{a}s and S\'{a}rk\"{o}zy \cite{GS14} on the structure of the subgraphs of $\overrightarrow{K}_n(L)$ corresponding to partial transversals of $L$. In that paper they conjectured that all latin squares have a partial transversal of size $n-2$ which corresponds to a directed path in $\overrightarrow{K}_n(L)$. This conjecture remains open, although Benzing et al.\! \cite{BPS20} showed that there exists such a partial transversal of size $n-O(n^{2/3})$ in every latin square. Moreover, a recent paper of Gould and Kelly \cite{GK21plus} demonstrates that almost every latin square has a transversal corresponding to a rainbow Hamilton cycle in $\overrightarrow{K}_n(L)$. 
+
+An additional colored-graph representation of latin squares is worth mentioning briefly. One can associate with a latin square $L$ an arc-coloring of the complete directed graph $\overrightarrow{K}_n$ by giving the edge $v_iv_j$ the color $L_{i,j}$. Writing $\overrightarrow{K}_n(L)$ for this coloring, notice that partial transversals in $L$ correspond to rainbow subgraphs of $\overrightarrow{K}_n(L)$ with maximum in-degree and maximum out-degree 1. The original motivation for considering Hamilton 2-plexes was a paper of Gy\'{a}rf\'{a}s and S\'{a}rk\"{o}zy \cite{GS14} on the structure of the subgraphs of $\overrightarrow{K}_n(L)$ corresponding to partial transversals of $L$. In that paper they conjectured that all latin squares have a partial transversal of size $n-2$ which corresponds to a directed path in $\overrightarrow{K}_n(L)$. This conjecture remains open, although Benzing et al.\! \cite{BPS20} showed that there exists such a partial transversal of size $n-O(n^{2/3})$ in every latin square. Moreover, a recent paper of Gould and Kelly \cite{GK21plus} demonstrates that almost every latin square has a transversal corresponding to a rainbow Hamilton cycle in $\overrightarrow{K}_n(L)$. 
 
 
 
 \section{Complete mappings and group sequences}\label{sec:introgroup}
 
-It is possible to discuss partial transversals in group-based latin squares using purely group-theoretic language. Indeed, a \defn{complete mapping} of a group $G$ is a bijection $\theta:G \rightarrow G$ such that $g \mapsto g \theta(g)$ is also a bijection.  Observe that, if $\theta$ is a complete mapping of $G$, then $\{\left(g,\theta(g),g\theta(g)\right) \mid g \in G\}$ is a transversal of $L_G$.  
-The study of complete mappings in groups goes back to at least the 1940s \cite{Pa47}, though work on similar ideas appeared in the late 19th century (see \cite[Chapter 3]{EvansBook}). Important results from this era include Bruck's proof \cite{Br44} that all groups of odd order have complete mappings, Paige's proof \cite{Pa47} that an abelian group has a complete mapping if and only if it does not have a unique element of order 2, and Bateman's proof \cite{Ba50} that every countably infinite group has a complete mapping. In 1955, Hall and Paige \cite{HP55} proved that groups with nontrivial non-cyclic \gls{Sylow 2-subgroup}s do not have complete mappings and conjectured that the converse to this statement holds. It took over 50 years before the Hall-Paige conjecture was finally resolved in three separate papers by Wilcox, Evans, and Bray.
+It is possible to discuss partial transversals in group-based latin squares using purely group-theoretic language. A \defn{complete mapping} of a group $G$ is a bijection (but not necessarily a homomorphism) $\theta:G \rightarrow G$ such that $g \mapsto g \theta(g)$ is also a bijection.  Observe that, if $\theta$ is a complete mapping of $G$, then $\{\left(g,\theta(g),g\theta(g)\right) \mid g \in G\}$ is a transversal of $L_G$.  
+The study of complete mappings in groups goes back to at least the 1940s \cite{Pa47}, though work on similar ideas appeared in the late 19th century (see \cite[Chapter 3]{EvansBook}). Important results from the mid-twentieth century include Bruck's proof \cite{Br44} that all groups of odd order have complete mappings, Paige's proof \cite{Pa47} that an abelian group has a complete mapping if and only if it does not have a unique element of order 2, and Bateman's proof \cite{Ba50} that every countably infinite group has a complete mapping. 
+
+In 1955, Hall and Paige \cite{HP55} proved that groups with nontrivial cyclic \gls{Sylow 2-subgroup}s do not have complete mappings and conjectured that the converse to this statement holds. It took over 50 years before the Hall-Paige conjecture was finally resolved in three separate papers by Wilcox, Evans, and Bray. 
 
 \begin{theorem}[Hall and Paige \cite{HP55}; Bray \cite{BCCSZ20}; Evans \cite{Ev09}; Wilcox \cite{Wi09}]\label{thm:bigequiv}
-A group $G$ has a complete mapping if and only if $\Syl_2(G)$ is trivial or non-cyclic.
+A group has a complete mapping if and only if its Sylow 2-subgroups are trivial or non-cyclic.
 \end{theorem}
 
-While Theorem \ref{thm:bigequiv} fully resolved the existence question for transversals in group-based latin squares, the existence of near transversals was not resolved until last year \cite{GH20} with work that will be presented in this thesis. Given a group $G$ and three (not necessarily distinct) elements $a,b,c \in G$, we say that $\phi:G\setminus\{a\} \rightarrow G \setminus \{b\}$ is a \defn{near complete mapping} if $g \mapsto g\phi(g)$ is a bijection between $G \setminus \{a\}$ and $G \setminus \{c\}$. Notice that near complete mappings of $G$ are equivalent to near transversals of $L_G$. Moreover, given any complete mapping $\theta$, one can define a near complete mapping by removing any element from the domain of $\theta$. This means that every group with a complete mapping also has a near complete mapping. For abelian groups, the existence of near complete mappings in groups with no complete mapping follows from a theorem of Hall \cite{Ha52}. We will extend this result to all groups in Chapter \ref{ch:jcd}.
+Below, we will write $\Syl_2(G)$ for the isomorphism class of the Sylow 2-subgroups of the group $G$. While Theorem \ref{thm:bigequiv} fully resolved the existence question for transversals in group-based latin squares, the existence of near transversals was not resolved until last year \cite{GH20} with work that will be presented in this thesis. Given a group $G$ and three (not necessarily distinct) elements $a,b,c \in G$, we say that $\phi:G\setminus\{a\} \rightarrow G \setminus \{b\}$ is a \defn{near complete mapping} if $g \mapsto g\phi(g)$ is a bijection between $G \setminus \{a\}$ and $G \setminus \{c\}$. Notice that near complete mappings of $G$ are equivalent to near transversals of $L_G$. Moreover, given any complete mapping $\theta$, one can define a near complete mapping by removing any element from the domain of $\theta$. This means that every group with a complete mapping also has a near complete mapping. For abelian groups, the existence of near complete mappings in groups with no complete mapping follows from a theorem of Hall \cite{Ha52}. We will extend this result to all groups in Chapter \ref{ch:jcd}.
 
-One may also describe Hamilton 2-plexes in group-based latin squares using purely group-theoretic language. Before we introduce this new terminology, it is worth briefly mentioning the notions after which it is modelled.  A \defn{sequencing} of a group $G$ is an ordering of its elements $g_1,g_2,\ldots,g_n$ such that the partial products $g_1,g_1g_2,\ldots,g_1g_2\cdots g_n$ are all distinct.  If $G$ has a sequencing, we refer to it as a \defn{sequenceable} group. Notice that, given a sequencing of $G$, the map $g_1g_2\cdots g_i \mapsto g_{i+1}$ is a near complete mapping. Sequencings were introduced by Gordon \cite{Go61}, who fully classified the sequenceable abelian groups. There has since been a substantial body of work on sequencings of groups and various generalizations of this notion. We will focus on one of these generalizations, as it will be particularly important in what follows, while referring the reader to a comprehensive dynamic survey due to Ollis \cite{OllisSurvey} for more information.
+One may also describe Hamilton 2-plexes in group-based latin squares using purely group-theoretic language. Before we introduce this new terminology, it is worth briefly mentioning the notions after which it is modelled.  A \defn{sequencing} of a group $G$ is an ordering of its elements $g_1,g_2,\ldots,g_n$ such that the partial products $g_1,g_1g_2,\ldots,g_1g_2\cdots g_n$ are all distinct.  If $G$ has a sequencing, we refer to it as a \defn{sequenceable} group. Notice that, given a sequencing of $G$, for each $i \in [n-1]$ the map $g_1g_2\cdots g_i \mapsto g_{i+1}$ is a near complete mapping . Sequencings were introduced by Gordon \cite{Go61}, who fully classified the sequenceable abelian groups. There has since been a substantial body of work on sequencings of groups and various generalizations of this notion. We will focus on one of these generalizations, as it will be particularly important in what follows, while referring the reader to a comprehensive dynamic survey due to Ollis \cite{OllisSurvey} for more information.
 
-A \defn{harmonious sequence} of a group $G$ is an ordering of its elements $g_1,g_2,\ldots,g_n$ such that the consecutive products $g_1g_2,g_2g_3,\ldots,g_{n-1}g_n,g_ng_1$ are all distinct; if $G$ has a harmonious sequence we call it a \defn{harmonious group}. Notice that, given a harmonious sequence of $G$, the map $g_i \mapsto g_{i+1}$ is a complete mapping. Moreover, this complete mapping corresponds to a rainbow Hamilton cycle in $\overrightarrow{K}_n(L_G)$. Harmonious groups were introduced by Beals et al.\! \cite{BGHJ91},  who completely classified harmonious abelian groups and showed that all groups of odd order are harmonious. Wang and Leonard \cite{WL00} have  shown that dicyclic groups are also harmonious.
+A \defn{harmonious sequence} of a group $G$ is an ordering of its elements $g_1,g_2,\ldots,g_n$ such that the consecutive products $g_1g_2,g_2g_3,\ldots,g_{n-1}g_n,g_ng_1$ are all distinct; if $G$ has a harmonious sequence we call it a \defn{harmonious group}. Notice that, given a harmonious sequence of $G$, the map $g_i \mapsto g_{i+1}$ is a complete mapping. Moreover, this complete mapping corresponds to a rainbow Hamilton cycle in $\overrightarrow{K}_n(L_G)$. Harmonious groups were introduced by Beals et al.\! \cite{BGHJ91},  who completely classified harmonious abelian groups and showed that all groups of odd order are harmonious. Wang and Leonard \cite{WL00} have  shown that dicyclic groups are also harmonious. Observe that a harmonious sequence of $G$ corresponds to the vertex sequence of a rainbow Hamilton cycle in $\overrightarrow{K}_n(L_G)$. This means that the conjecture of Gy\'{a}rf\'{a}s and S\'{a}rk\"{o}zy \cite{GS14} mentioned in the previous section holds for all latin squares based-on harmonious groups.
 
 Inspired by the fact that harmonious sequences corresponds to the vertex sequences of a rainbow Hamilton cycles in $\overrightarrow{K}_n(L_G)$, we introduce the notion of H2-harmonious sequences to study Hamilton cycles in $K_{n,n}(L_G)$. Notice that  we could define $K_{n,n}(G) :=K_{n,n}(L_G)$ without reference to latin squares: define the bipartition $(R,C)$ of $K_{n,n}$ by $R = \left\{[g]_R \mid g \in G\right\}$ and $C = \{[g]_C \mid g \in G\}$ and label the edge $[g]_C[h]_R$ with the group element $gh$. Saving a formal definition for Chapter \ref{ch:h2terrace}, we can here define a \defn{H2-harmonious sequence} of $G$ as the sequence of group elements given by removing the brackets from the vertex sequence of a Hamilton 2-plex in $K_{n,n}(G)$. Notice that, by the discussion in Section \ref{sec:introconj}, $\mathbb{Z}_2 \times \mathbb{Z}_2$ is not H2-harmonious. Moreover, in light of Conjecture \ref{conj:main}, we believe that all other groups are H2-harmonious. 
+
+It is worth briefly discussing the relationship between harmonious groups and H2-harmonious groups. It is certainly not the case that every H2-harmonious group is harmonious: we will show in Theorem \ref{thm:h2gf2k} that an infinite family of groups which are known to not be harmonious are H2-harmonious. It may be the case that all harmonious groups are H2-harmonious---indeed, we conjecture that this is the case---but this connection implication is not direct. Indeed, we will use harmonious sequences to show that certain families of groups are H2-harmonious, but these proofs depend upon various additional properties of the groups in question.
 
 
 The next two chapters of this thesis study group-based latin squares using the language just introduced. In Chapter \ref{ch:jcd}, we prove that every group has a near complete mapping. In Chapter \ref{ch:h2terrace}, we establish the existence of H2-harmonious sequences for many families of groups, including all abelian groups besides $\mathbb{Z}_2 \times \mathbb{Z}_2$ and all groups of odd order. We then turn to purely combinatorial questions in Chapter \ref{ch:varplex}, using tools from extremal and probabilistic combinatorics to establish the existence of $(k,\ell)$-plexes and Hamilton $(2,\ell)$-plexes in various families of combinatorial arrays. 
@@ -1025,7 +1043,7 @@ The goal of this chapter is rather transparent: we provide a proof of its titula
 Every group-based latin square has a near transversal.
 \end{theorem}
 
-It is worth noting that Theorem \ref{thm:jcdmain} can be trivially extended to a slightly wider class of latin squares. The existence of a near transversal is not affected by relabelling the rows, columns, or symbols of $L$, nor is it affected by permuting the roles played by rows, columns, and symbols. Thus, every latin square which is \gls{main class equivalent}  to a group-based latin square has a near transversal by Theorem \ref{thm:jcdmain}. 
+%It is worth taking care here to \defn{group-based latin square}. 
 
 
 
@@ -1053,7 +1071,7 @@ a set $W \subseteq V$, the \defn{induced subgraph} of $\Gamma$ with respect to $
 %
 The \defn{M\"{o}bius ladder} of order $2n$, denoted $M_n$, is the cubic graph formed from a cycle of length $2n$---referred to as the \emph{rim} of $M_n$---by adding $n$ edges, one joining each pair of vertices at distance $n$ in the initial cycle. 
 %We refer to the initial cycle as the \emph{rim} of $M_n$, and refer to the edges between opposite vertices in the rim as \emph{rungs}. 
-The \defn{prism graph} of order $2n$, denoted $Y_n$, is the Cartesian product of a cycle of length $n$ and an edge; in other words, $Y_n$ is obtained from two copies of the $n$-cycle by adding edges between corresponding vertices.
+The \defn{prism graph} of order $2n$, denoted $Y_n$ is the graph obtained from two copies of the $n$-cycle by adding edges between corresponding vertices.
 
 
 \begin{figure}[t]
@@ -1115,9 +1133,13 @@ Because the $\left(2k(l-m)\right)$-vertex graph $\left(\frac{l-m}{2}\right)Y_{2k
 Let $G$ be a group of order $n$ with identity element $1$ and let $\Syl_2(G)$ denote the isomorphism class of $G$'s Sylow 2-subgroups.
 %
 %
-It is a nice algebraic exercise to check that, if $H$ is a group of odd order, then the identity map is a complete mapping. Combining this with Beals, Gallian, Headley, and Jungreis's theorem that all groups of odd order are harmonious, we obtain the following theorem.
+It is a nice algebraic exercise to check that, if $H$ is a group of odd order, then the identity map is a complete mapping. Indeed, $H$ has order $2k+1$, $\theta:H \rightarrow H$ is the identity map, and $g\theta(g) = h\theta(h)$ for some $g,h \in H$, then 
 %
-\begin{theorem}[\cite{BGHJ91}]\label{thm:harmonious}
+\[ g = g \cdot g^{2k+1} = g^{2k+2} = (g^2)^{k+1}=(h^2)^{k+1} = h^{2k+2} = h.\]
+%
+ Combining this with Beals, Gallian, Headley, and Jungreis's theorem that all groups of odd order are harmonious, we obtain the following theorem.
+%
+\begin{theorem}[Beals et al.\! \cite{BGHJ91}]\label{thm:harmonious}
 For every group $H$ of odd order $m$, there exists an ordering $H = \{h_1,h_2,\ldots,h_{m}\}$ such that, taking indices modulo $m$, both $h_i \mapsto h_{i+1}$ and $h_i \mapsto h_i$ are complete mappings.
 \end{theorem}
 
@@ -1126,11 +1148,11 @@ Given two subsets $X_1,X_2 \subseteq G$ the \defn{product set} of $X_1$ by $X_2$
 \[X_1X_2 := \{x_1x_2\,:\, x_1 \in X_1, \, x_2 \in X_2\}.\]
 %
 %Note that it is possible that $|X_1X_2| \neq |X_1||X_2|$; some elements may have multiple representations in the underlying set of products. 
-We write $Xy$ for the product set $X\{y\}$. Let $K$ be a subgroup of $G$ and let $H$ be a normal subgroup of $G$. We say that $G$ is \defn{the semidirect product} of $K$ and $H$, written $G =  K \ltimes H$,  if $K \cap H = \{1\}$, $KH = G$, and $|G| = |K||H|$.
+We write $Xy$ for the product set $X\{y\}$. If $K$ be a subgroup of $G$ and let $H$ be a normal subgroup of $G$, then we say that $G$ is \defn{the semidirect product} of $K$ and $H$---written $G =  K \ltimes H$---if $K \cap H = \{1\}$ and $KH = G$.
 %
-The following was noted in \cite{HP55} as following from a result of Burnside.
+The following was noted in \cite{HP55} as following from a theorem first proved by William Burnside. We refer the reader to \cite[p. 139]{ZassenhausBook} for a proof.
 %
-\begin{lemma}[Burnside, \cite{HP55}]\label{lemma:burnside}
+\begin{lemma}[Burnside]\label{lemma:burnside}
 Let $G$ be a finite group and let $K$ be a Sylow 2-subgroup of $G$. If $K$ is cyclic and nontrivial, then there is a normal subgroup of odd order $H \triangleleft G$ such that 
 %
 \[G=  K \ltimes H.\]
@@ -1143,7 +1165,7 @@ These are all the group-theoretic preliminaries we need to prove that, for every
 
 
 \begin{proof}[Proof of Lemma \ref{lemma:JCD}]
-Let $L$ be a latin square based on a group $G$ of order $n=kl$, where $k\geq 2$ is a power of 2 and $l$ is odd. Moreover, suppose $G$ does not have a complete mapping. Theorem \ref{thm:bigequiv} tells us that $\Syl_2(G) = \mathbb{Z}_k$. It then follows from Lemma \ref{lemma:burnside} that $G$ contains a normal subgroup $H$ of order $l$ and an element $b$ of order $k$ such that 
+Let $L$ be a latin square based on a group $G$ of order $n=kl$, where $k\geq 2$ is a power of 2 and $l$ is odd. We may assume that $G$ does not have a complete mapping. Theorem \ref{thm:bigequiv} tells us that $\Syl_2(G) = \mathbb{Z}_k$. It then follows from Lemma \ref{lemma:burnside} that $G$ contains a normal subgroup $H$ of order $l$ and an element $b$ of order $k$ such that 
 %
 \[G = \text{\acrshort{b}} \ltimes H.\]
 
@@ -1168,7 +1190,7 @@ T_1 &:= \left\{ \left(b^ih_i,h_ib^i\right) \,:\, i \in [km] \right\}, \\
  T \,&:=T_1 \cup T_2. 
 \end{align*}
 %
-Furthermore, let $F := H \setminus H^\ast$ and let
+Furthermore, let $F := H \setminus H^\ast$ (i.e.\! the elements of $H$ which are not in $H^\ast$) and let
 %
 \begin{align*}
 U_1 &:= \left\{ \left(b^if,fb^i\right) \,:\, f \in F,\, i \in [k]\right\},\\
@@ -1180,7 +1202,8 @@ Finally, let
 %
 \[ W:=T \cup U.\]
 %
-We show the induced subgraph $\Gamma[W] \cong \Lambda_{n,m}$ via the following  three claims. 
+An example of these sets in the latin square $L_{S_3 \times \mathbb{Z}_3}$ is given in Figure \ref{figure}.
+ We show the induced subgraph $\Gamma[W] \cong \Lambda_{n,m}$ via the following  three claims. 
 
 \begin{figure}[t]
 \centering
@@ -1212,7 +1235,7 @@ $bc^2d$&$d^2$&$bcd$&$c^2d^2$&$bd$&$cd^2$&$bc^2d^2$&$bc^2$&$bd^2$&$b$&$\underblue
 $bc^2d^2$&$d$&$bcd^2$&$c^2d$&$bd^2$&$cd$&$bc^2$&$bc^2d$&$b$&$bd$&$bc$&$\underblue{bcd}$&$c^2$&$c^2d^2$&1&$d^2$&$c$&$\underblue{cd^2}$\\\hline
 \end{tabular}
 }%
-\caption[The construction of Lemma \ref{lemma:JCD} for the group $S_3 \times \mathbb{Z}_3$]{The \gls{cayley table} of $S_3 \times \mathbb{Z}_3= \langle b,c,d \,|\, b^2=c^3=d^3 = 1, bc = cb, bd = d^2b\rangle$ with $\overred{T}$ and $\underblue{U}$ highlighted. Here $k=2$, $H=\langle c,d\rangle$, and $H^\ast = \langle c \rangle$, with $H^\ast$ ordered by $h_i = c^i$. The first six rows and columns are indexed by $\langle b \rangle H^\ast$ and the main diagonal is $T_1 \cup U_1$.}\label{figure}
+\caption[The construction of Lemma \ref{lemma:JCD} for the group $S_3 \times \mathbb{Z}_3$]{The \gls{Cayley table} of $S_3 \times \mathbb{Z}_3= \langle b,c,d \,|\, b^2=c^3=d^3 = 1, bc = cb, bd = d^2b\rangle$ with $\overred{T}$ and $\underblue{U}$ highlighted. Here $k=2$, $H=\langle c,d\rangle$, and $H^\ast = \langle c \rangle$, with $H^\ast$ ordered by $h_i = c^i$. The first six rows and columns are indexed by $\langle b \rangle H^\ast$ and the main diagonal is $T_1 \cup U_1$.}\label{figure}
 \end{figure}
 
 
@@ -1235,7 +1258,7 @@ Moreover, as $a = b^{k/2}$, for every $h \in H^\ast$ we have $\alpha(bhb^{-1}) =
 b H^\ast b^{-1} = H^\ast.
  \end{equation}
  %
-It then follows from the definition of $F$ that
+It then follows from the definition of $F$, and the fact that both $H$ and $H^\ast$ are both fixed under conjugation by $b$, that
 %
 \begin{equation}\label{sgcommute}
 bF b^{-1}= F
@@ -1291,15 +1314,15 @@ so $h^2 = \alpha(f^2) = (\alpha(f))^2$ and \eqref{sqcomp} implies $h = \alpha(f)
 $\Gamma[T]$ is isomorphic to $M_{km}$
 \end{claim}
 
-Observe that, when enumerating the vertices in $T$, every element of $\langle b\rangle H^\ast$ occurs exactly twice as a first coordinate and, as $\langle b \rangle$ and $H^\ast$ commute by \eqref{normalizer}, exactly twice as a second coordinate. Thus, as is the case for $\Gamma[U]$, each vertex in $\Gamma[T]$ is incident to exactly one row edge and exactly one column edge. Unlike in $\Gamma[U]$, the row and column edges of $\Gamma[T]$ form a single cycle of length $2mk$. Indeed, as $m$ is odd and $|b|$ is a power of 2,
+Observe that, when enumerating the vertices in $T$, every element of $\langle b\rangle H^\ast$ occurs exactly twice as a first coordinate and, as $\langle b \rangle$ and $H^\ast$ commute by \eqref{normalizer}, exactly twice as a second coordinate. Thus, as is the case for $\Gamma[U]$, each vertex in $\Gamma[T]$ is incident to exactly one row edge and exactly one column edge. Unlike in $\Gamma[U]$, the row and column edges of $\Gamma[T]$ form a single cycle of length $2mk$. Indeed, as $m$ is odd and the order of $b$ is $k$, which is a power of 2,
 %
-\[ (h_1,h_1), (h_1,h_2b),(bh_2,h_2b),\ldots, (b^{k-1}h_{m},b^{k-1}h_{m}), (b^{k-1}h_{m},h_0)  \]
+\[ (h_m,h_m), (h_m,h_1b),(bh_1,h_1b),\ldots, (b^{k-1}h_{m-1},h_{m-1}b^{k-1}), (b^{k-1}h_{m-1},h_m)  \]
 %
 is a \gls{Hamilton cycle} in $\Gamma[T]$ which contains all of $\Gamma[T]$'s row and column edges. 
 
 To establish Claim \ref{mobius} it suffices to show that for every $i,j \in [km]$ and every $\varepsilon,\delta\in\{0,1\}$, the vertices $ (b^ih_i,h_{i+\varepsilon}b^{i+\varepsilon})$ and $(b^jh_j,h_{j+\delta}b^{j+\delta})$ are joined by a symbol edge  in $\Gamma[T]$  if and only if $i \equiv j + \frac{k}{2}m \pmod{km}$ and $\varepsilon = \delta$. 
 
-Indeed if $i \equiv  j + \frac{k}{2}m\pmod{km}$, then $i \equiv j \pmod{m}$ and, as $m$ is odd, $i \equiv j + k/2 \pmod{k}$. Together with $\varepsilon  = \delta$,  as well as Theorem \ref{thm:harmonious} and the definition of $H^\ast$, this implies
+Indeed if $i \equiv  j + \frac{k}{2}m\pmod{km}$, then $i \equiv j \pmod{m}$ and, as $m$ is odd, $i \equiv j + k/2 \pmod{k}$. Together with $\varepsilon  = \delta$ and the definition of $H^\ast$, this implies
 %
 \[ b^ih_ih_{i+\varepsilon}b^{i+\varepsilon} = b^jah_jh_{j+\delta}ab^{j+\delta} = b^jh_jh_{j+\delta}b^{j+\delta},\]
 %
@@ -1330,9 +1353,9 @@ One way out of this problem would be a study of near complete mappings in groups
 For every finite non-abelian group $G$, the latin square $L_G$ has a non-extendable near transversal.
 \end{conjecture}
 %
-If true, Conjecture \ref{keedwell} cannot be extended to any abelian groups: an old result of Paige \cite{Pa47} implies that, if $G$ is abelian, then $L_G$ has either a transversal or a non-extendable near transversal, but it cannot have both. On the other hand, it is known that, for every integer $k \geq 1$, the \gls{cayley table} of the dihedral group $D_{4k+2}$ has both a transversal and a non-extendable near transversal \cite{Is90}. 
+If true, Conjecture \ref{keedwell} cannot be extended to any abelian groups: an old result of Paige \cite{Pa47} implies that, if $G$ is abelian, then $L_G$ has either a transversal or a non-extendable near transversal, but it cannot have both. On the other hand, it is known that, for every integer $k \geq 1$, the \gls{Cayley table} of the dihedral group $D_{4k+2}$ has both a transversal and a non-extendable near transversal \cite{Is90}. 
 
-We have just shown that Conjecture \ref{keedwell} holds for those non-abelian groups which do not have complete mappings. Perhaps our techniques can be used to find maximal independent sets of size $n-1$ in other latin square graphs based upon non-abelian groups, but additional insight would be needed for such a result. As far as we know, Conjecture \ref{keedwell} has not been attacked directly. However, many partial results are known due to its connection to sequenceable groups. 
+We have just shown that Conjecture \ref{keedwell} holds for those non-abelian groups that do not have complete mappings. Perhaps our techniques can be used to find maximal independent sets of size $n-1$ in other latin square graphs based upon non-abelian groups, but additional insight would be needed for such a result. As far as we know, Conjecture \ref{keedwell} has not been attacked directly. However, many partial results are known due to its connection to sequenceable groups. 
 
 There is also hope that another way out of our dependance on the classification of finite simple groups is possible. A recent paper of Eberhard, Manners, and Mrazovi\'{c} \cite{EMM20plus} uses Fourier analytic techniques to prove that Theorem \ref{thm:bigequiv} holds for all groups of order at least $10^5$.  This may be enough for Theorem \ref{thm:bigequiv} to survive any problems with the proof of the classification of finite simple groups. 
 
@@ -1388,7 +1411,7 @@ The main result of \cite{EMM20plus} is an asymptotically exact enumeration of th
 Continuing our study of group-based latin squares, we turn now to the question of Hamilton 2-plexes. As noted in Section \ref{sec:introgroup}, this question can be restated in terms of a novel type of group sequencing for which we now give a full, formal definition. Throughout this chapter, we will use indices which ``wrap-around,'' so that if $g_{m+1}$ is undefined, then $g_{m+1}=g_1$.
 
 \begin{definition}\label{def:h2seq}
-Let $G$ be a group of order $n$. An \defn{H2-harmonious sequence} of $G$ is a sequence $S~=~g_1,g_2,\ldots,g_{2n} \in G^{2n}$  such that every element of $G$ appears
+Let $G$ be a group of order $n$. An \defn{H2-harmonious sequence} of $G$ is a sequence $S~=~(g_1,g_2,\ldots,g_{2n}) \in G^{2n}$  such that every element of $G$ appears
  \renewcommand{\labelenumi}{(\alph{enumi})}
  \begin{enumerate}
 \item  once in the subsequence $e(S) := \left(g_{2i}\right)_{i=1}^{n}$,
@@ -1398,19 +1421,27 @@ Let $G$ be a group of order $n$. An \defn{H2-harmonious sequence} of $G$ is a se
 A group which has an H2-harmonious sequence is called \defn{H2-harmonious}.
 \end{definition}
 
-An H2-harmonious sequence $S$ of $G$ corresponds to the vertex-sequence of a Hamilton 2-plex in $K_{n,n}(G)$ by letting $e(S)$ and $o(S)$ denote, respectively, to the row vertices and the column vertices. Because $L_{\mathbb{Z}_2 \times \mathbb{Z}_2}$ is the only latin square of order less than 5 which does not have a Hamilton 2-plex, we have the following special case of Conjecture \ref{conj:main}.
+An H2-harmonious sequence $S$ of $G$ corresponds to the vertex-sequence of a Hamilton 2-plex in $K_{n,n}(G)$ by letting $e(S)$ and $o(S)$ denote, respectively, the row vertices and the column vertices. Because $L_{\mathbb{Z}_2 \times \mathbb{Z}_2}$ is the only latin square of order less than 5 which does not have a Hamilton 2-plex, we have the following special case of Conjecture \ref{conj:main}.
 
 \begin{conjecture}
 Every finite group except $\mathbb{Z}_2 \times \mathbb{Z}_2$ is H2-harmonious.
 \label{conj:groupmain}\end{conjecture}
 
-The goal of this chapter is to offer evidence in support of Conjecture \ref{conj:groupmain}. Using ideas similar to those presented in the previous chapter, it will be straightforward to show that all groups of odd order and all groups with no \gls{complete mapping} are H2-harmonious. It will take a bit more work to show that all dihedral groups---besides the (debatably) dihedral group of order 4---are H2-harmonious. Our most significant result, though, is a resolution of the special case of Conjecture \ref{conj:groupmain} for abelian groups.
+The goal of this chapter is to offer evidence in support of Conjecture \ref{conj:groupmain}. Using ideas similar to those presented in the previous chapter, it will be straightforward to show that all groups of odd order and all groups with no \gls{complete mapping} are H2-harmonious. It will take a bit more work to show that all dihedral groups---besides the (debatably) dihedral group of order 4---are H2-harmonious. A majority of the work in this chapter, though, will be directed towards resolving the special case of Conjecture \ref{conj:groupmain} for abelian groups.
 %
 \begin{theorem}\label{thm:h2abel}
 Every finite abelian group except $\mathbb{Z}_2 \times \mathbb{Z}_2$ is H2-harmonious.
 \end{theorem}
 %
-We begin this chapter with a  few basic results which apply to general (not necessarily abelian) groups. We then proceed with the proof of Theorem \ref{thm:h2abel}. We end with a list of computer-generated sequencings for all groups of order less than 32 which were not covered by previously proven theorems.  
+
+Several of the proofs in this chapter, including the proof of Theorem \ref{thm:h2abel}, will proceed inductively using group extensions.  We say that the group $G$ is an \defn{extension of $N$ by $Q$} if $G$ has a normal subgroup $N_0 \triangleleft G$ which is isomorphic to $N$ and the quotient $G/N_0$ is isomorphic to $Q$. We can also use the language of group extensions to bring all of this chapter's theoretical results together into the following main theorem. 
+
+\begin{theorem}\label{thm:h2main}
+Let $N$ be a group of odd order, let $Q$ be a finite group, and let $G$ be an \gls{extension} of $N$ by $Q$. If $|G| >4 $ and $Q$ either has a cyclic subgroup of index 2 or is abelian, then $G$ is H2-harmonious.
+\end{theorem}
+
+
+We begin this chapter with a  few basic results which apply to general (not necessarily abelian) groups. We then proceed with the proof of Theorem \ref{thm:h2abel}. We end with a list of computer-generated sequencings for all groups of order less than 32 which were not covered by previously proven theorems.  Throughout this chapter we will use the term \defn{permutation of $G$} to refer to a sequence $\left( g_i \right)_{i=1}^{|G|}$ in which every element of $G$ appears.
 
 
 
@@ -1444,9 +1475,9 @@ Every group of odd order is H2-harmonious.
 \begin{proof}
 Given a group $G$ of odd order, let $ g_1,g_2,\ldots,g_{n}$ be the \gls{harmonious sequence} of $G$ guaranteed to exist by Theorem \ref{thm:harmonious}.  This means that $g_i \mapsto g_i$ and $g_i \mapsto g_{i+1}$ are both \gls{complete mapping}s. That
 %
-$S :=  g_1,g_1,g_2,g_2,\ldots,g_{n},g_{n}$
+$S :=  (g_1,g_1,g_2,g_2,\ldots,g_{n},g_{n})$
 %
-is an H2-harmonious sequence then follows from the fact that $\pi(S)$ is obtained by interleaving $\left(g_i^2\right)_{i=1}^n$ and $\left(g_ig_{i+1}\right)_{i=1}^n$.
+is an H2-harmonious sequence then follows from the fact that $\pi(S) = \left(g_i^2,  g_ig_{i+1}\right)_{i=1}^n$.
 \end{proof}
 
 Another result concerning H2-harmonious sequences which we obtain by leaning heavily upon the extensive literature concerning \gls{complete mapping}s is the following.
@@ -1455,10 +1486,10 @@ Another result concerning H2-harmonious sequences which we obtain by leaning hea
 Every finite group with no complete mapping is H2-harmonious.
 \end{theorem}
 
-The proof of Theorem \ref{thm:h2nonHP} hides an even greater mass of deep group-theoretic work than the proof of Theorem \ref{thm:h2odd}; as stated, Theorem \ref{thm:h2nonHP} depends upon the monumental Theorem \ref{thm:bigequiv}, and therefore upon the classification of finite simple groups. Of course, we could avoid this burdensome dependence by stating Theorem \ref{thm:h2nonHP} as: every group with nontrivial cyclic \gls{Sylow 2-subgroup}s is H2-harmonious. However, the strongest possible statement pairs nicely with the following account of the relevant combinatorial machinery. Though fairly elementary, this result will prove to be a powerful tool in the construction of H2-harmonious sequences. A group $G$ is an \defn{extension} of  $N$ by $Q$ if $G$ has a normal subgroup $N_0 \triangleleft G$ which is isomorphic to $N$ and the quotient $G/N_0$ is isomorphic to $Q$. Moreover, throughout this chapter we will use the term \defn{permutation of $G$} to refer to a sequence $\left( g_i \right)_{i=1}^{|G|}$ in which every element of $G$ appears.
+The proof of Theorem \ref{thm:h2nonHP} hides an even greater mass of deep group-theoretic work than the proof of Theorem \ref{thm:h2odd}: in its present form, Theorem \ref{thm:h2nonHP} depends upon the monumental Theorem \ref{thm:bigequiv}, and therefore upon the classification of finite simple groups. Of course, we could avoid this burdensome dependence by stating Theorem \ref{thm:h2nonHP} as: every group with nontrivial cyclic \gls{Sylow 2-subgroup}s is H2-harmonious. However, the strongest possible statement pairs nicely with the following account of the relevant combinatorial machinery. Though fairly elementary, this result will prove to be a powerful tool in the construction of H2-harmonious sequences. 
 
 \begin{lemma}\label{lemma:h2util}
-If a finite group $G$ is an \gls{extension} of an H2-harmonious group by a group of odd order, then $G$ is H2-harmonious.
+If a finite group $G$ is an \gls{extension} of a group of odd order by an H2-harmonious group, then $G$ is H2-harmonious.
 \end{lemma}
 
 \begin{proof}
@@ -1595,7 +1626,7 @@ If a finite group $G$ of order at least 6 has a cyclic subgroup of index 2, then
 
 \end{tikzpicture} 
 
-\caption[Tying together two \gls{rainbow} cycles in the proof of Theorem \ref{thm:h22xk}]{An illustration of how $X_1$ and $X_2$ are tied together into a Hamilton 2-plex. Here, $X_1$ and $X_2$ are the cycles formed by black and thick-red edges and $Y$ is formed by the thick-red and dashed-blue edges. Here, and in all subsequent figures, we draw vertices of $C$ in black and vertices of $R$ in white.}
+\caption[Tying together two \gls{rainbow} cycles in the proof of Theorem \ref{thm:h22xk}]{An illustration of how $X_1$ and $X_2$ are tied together into a Hamilton 2-plex $E(Y) \triangle E(X_1 \cup X_2)$. Here, $X_1$ and $X_2$ are the cycles formed by black and thick-red edges and $Y$ is formed by the thick-red and dashed-blue edges. In this figure, and all subsequent figures, we draw vertices of $C$ in black and vertices of $R$ in white.}
 \label{fig:h2z2zm}
 \end{figure}
 
@@ -1610,7 +1641,7 @@ and
 %
 \[ X_2 := \left([b^{k+i-1}a]_C,[b^{k+i-1}]_R\right)_{i=0}^{k-1},[b^{-1}a]_C,\left([ab^{k+i}]_R,[b^ia]_C\right)_{i=0}^{k-2}[ab^{-1}]_R,[b^{k-1}a]_C.\]
 %
-Notice that the condition $k \geq 2$ is necessary for these two cycles to be well-defined. 
+Notice that the condition $k \geq 2$ is necessary for these two cycles to be well-defined. Moreover, $X_1$ and $X_2$ are disjoint.
 
 Recall that $G$ is not necessarily abelian, and the label on the edge $[x]_C[y]_R$ is the group element corresponding to the product $yx$. The sequence of edge labels in $X_1$, starting with $[b^{-1}]_C[b^{-1}]_R$, is 
 %
@@ -1634,7 +1665,7 @@ Therefore, the set of edge labels in $E(Y) \cap E(X_1 \cup X_2)$ is the same as 
 %
 \end{proof}
 
-The original motivation for the argument in the proof of Theorem \ref{thm:h22xk} was to show that dihedral groups are H2-harmonious. The more general result we have obtained allows us to conclude that several well-known infinite families of groups are H2-harmonious. Towards showing that Conjecture \ref{conj:groupmain} holds for small groups, we are particularly interested in the \defn{dicyclic groups}, which can be defined by $\Dic_{4n} := \langle a,b \,| \, a^n=b^2, a^{2n} = abab^{-1} = 1\rangle$, and the \defn{semidihedral groups}, which can be defined by $SD_{2^{n}} := \langle a,b \,|\, a^{2^{n-1}}=b^2=1, abab=a^{2^{n-2}}\rangle$ (see e.g.\! the documentation for the named constructions of both of these groups in Sage \cite{sagemath}). We end this section with a corollary which will be useful in Section \ref{sec:smallgrps} below.
+The original motivation for the argument in the proof of Theorem \ref{thm:h22xk} was to show that dihedral groups are H2-harmonious. The more general result we have obtained allows us to conclude that several well-known infinite families of groups are H2-harmonious. Towards showing that Conjecture \ref{conj:groupmain} holds for small groups, we are particularly interested in the \defn{dicyclic groups} of order $4n$, which can be defined by $\Dic_{4n} := \langle a,b \,| \, a^n=b^2, a^{2n} = abab^{-1} = 1\rangle$, and the \defn{semidihedral groups} of order $2^n$, which can be defined by $SD_{2^{n}} := \langle a,b \,|\, a^{2^{n-1}}=b^2=1, abab=a^{2^{n-2}}\rangle$ (see e.g.\! the documentation for the named constructions of both of these groups in Sage \cite{sagemath}). We end this section with a corollary which will be useful in Section \ref{sec:smallgrps} below.
 
 \begin{corollary}\label{cor:h2dih}
 All dihedral groups, dicyclic groups, and semidihedral groups of order at least 6 are H2-harmonious.
@@ -1716,7 +1747,7 @@ For $k \geq 3$, the group $\mathbb{Z}_2^k$ is H2-harmonious.
 \end{figure}
 
 \begin{proof}
-Consider $\mathbb{Z}_2^k$ as the additive group of the finite field $\mathbb{F}_{2^k}$. It is known (see e.g. \cite{Co90}) that $k \geq 3$ implies $\mathbb{F}_{2^k}$ has a primitive element, say $\alpha$, whose trace is 0 (i.e. $\alpha+\alpha^2+\alpha^4+\cdots+\alpha^{2^{k-1}} = 0$). We claim that the polynomial $p(x) := x^2+x+\alpha \in \mathbb{F}_{2^k}[x]$ has a root in $\mathbb{F}_{2^k}$. Indeed, we know that $p(x)$ has a root $\beta$ in some extension of $\mathbb{F}_{2^k}$, say $K \supseteq \mathbb{F}_{2^k}$, so we only need to show that, in fact, $ \beta \in \mathbb{F}_{2^k}$. Working now over $K$, which has characteristic 2, it follows from $\alpha = \beta^2 + \beta$ and  $\alpha+\alpha^2+\cdots+\alpha^{2^{k-1}} = 0$  that $\beta^{2^k}+\beta=0$. This means $\beta$ is a root of $x^{2^k}+x$, whose splitting field over $\mathbb{F}_2$ is $\mathbb{F}_{2^k}$. We may therefore conclude that
+Consider $\mathbb{Z}_2^k$ as the additive group of the finite field $\mathbb{F}_{2^k}$. Cohen proved in \cite{Co90} that $\mathbb{F}_{2^k}$ has a primitive element, say $\alpha$, whose trace is 0 (i.e. $\alpha+\alpha^2+\alpha^4+\cdots+\alpha^{2^{k-1}} = 0$) whenever $k \geq 3$. We claim that the polynomial $p(x) := x^2+x+\alpha \in \mathbb{F}_{2^k}[x]$ has a root in $\mathbb{F}_{2^k}$. Indeed, we know that $p(x)$ has a root $\beta$ in some extension of $\mathbb{F}_{2^k}$, say $K \supseteq \mathbb{F}_{2^k}$, so we only need to show that, in fact, $ \beta \in \mathbb{F}_{2^k}$. Working now over $K$, which has characteristic 2, it follows from $\alpha = \beta^2 + \beta$ and  $\alpha+\alpha^2+\cdots+\alpha^{2^{k-1}} = 0$  that $\beta^{2^k}+\beta=0$. This means $\beta$ is a root of $x^{2^k}+x$, whose splitting field over $\mathbb{F}_2$ is $\mathbb{F}_{2^k}$. We may therefore conclude that
 %
  \[\beta,\alpha \in \mathbb{F}_{2^k} \text{ and } \alpha = \beta(\beta+1).\]
  
@@ -1724,7 +1755,7 @@ We will show that $K_{n,n}(\mathbb{Z}_2^k)$ has a Hamilton 2-plex. For the sake 
 %
  \[X := [1]_C,[\beta]_R,\left(  [\gamma^{i}\beta^i]_C, [\gamma^{i}\beta^{i+1}]_R \right)_{i=1}^{m-1}, [1]_C.\]
  %
-The sequence of edge-labels in $X$ can be obtained by interleaving $\left( (\beta\gamma)^i(\beta+1) \right)_{i=0}^{m-1}$ and $\left( (\beta\gamma)^i(1+\gamma)\right)_{i=1}^{m}$. But $\beta\gamma = \beta^2+\beta = \alpha$, and because $\alpha$ is a primitive element of $\mathbb{F}_{2^k}$, every nonzero element of $\mathbb{F}_{2^k}$ has a unique representation of the form $(\beta\gamma)^i$ for some $i \in [m]$. Moreover, right-multiplication by a fixed nonzero element is a permutation of $\mathbb{F}_{2^k} \setminus \{0\}$. It follows that
+The sequence of edge-labels in $X$ can be obtained by interleaving $\left( (\beta\gamma)^i(\beta+1) \right)_{i=0}^{m-1}$ and $\left( (\beta\gamma)^i(1+\gamma^{-1})\right)_{i=1}^{m}$. But $\beta\gamma = \beta^2+\beta = \alpha$, and because $\alpha$ is a primitive element of $\mathbb{F}_{2^k}$, every nonzero element of $\mathbb{F}_{2^k}$ has a unique representation of the form $(\beta\gamma)^i$ for some $i \in [m]$. Moreover, right-multiplication by a fixed nonzero element is a permutation of $\mathbb{F}_{2^k} \setminus \{0\}$. It follows that
 %both $\left( (\beta\gamma^{-1})^i(\beta+1) \right)_{i=1}^{m}$ and $\left( (\beta\gamma^{-1})^i(\beta+\beta\gamma^{-1})\right))_{i=1}^{m}$ are permutations of $\mathbb{F}_{2^k} \setminus \{0\}$, and 
 $X$ has 2 edges of color $g$ for every $g \in \mathbb{F}_{2^k} \setminus \{0\}$. 
 
@@ -1747,7 +1778,7 @@ We claim that the symmetric difference of $E(X)$ and $E(Y)$ corresponds to a Ham
 %
 \end{proof}
 
-It would have been interesting to extend the field-theoretic construction in the proof of Theorem \ref{thm:h2gf2k} to all elementary abelian groups, but unfortunately this is not possible: the construction relies on the identities  $1+\gamma^{-1} = \beta$ and $1+\beta = \gamma^{-1}$ being concurrently true, which implies $\beta = \beta+2$. Of course, this does not affect the list of groups we can identify as H2-harmonious given the fact that Theorem \ref{thm:h2odd} takes care of all (elementary abelian) groups of odd order. 
+It would have been interesting to extend the field-theoretic construction in the proof of Theorem \ref{thm:h2gf2k} to all elementary abelian groups, but unfortunately this is not possible: the construction relies on the identities  $1+\gamma = \beta$ and $1+\beta = \gamma$ being concurrently true, which implies $\beta = \beta+2$. Of course, this does not affect the list of groups we can identify as H2-harmonious given the fact that Theorem \ref{thm:h2odd} takes care of all (elementary abelian) groups of odd order. 
 
 The final base case we will need for the proof of Theorem \ref{thm:h2abel} was obtained using the backtracking algorithm presented in Appendix \ref{app:backtrack}.
 
@@ -1775,7 +1806,7 @@ The final base case we will need for the proof of Theorem \ref{thm:h2abel} was o
 %a^3b^2&\overred{a^3b^3}&a^3&a^3b&b^2&b^3&1&b&ab^2&\overred{ab^3}&a&ab&a^2b^2&a^2b^3&a^2&a^2b\\\hline
 %a^3b^3&a^3&\overred{a^3b}&a^3b^2&b^3&1&b&b^2&ab^3&a&ab&ab^2&a^2b^3&a^2&a^2b&\overred{a^2b^2}\\\hline
 %\end{array}}$
-%\caption{The cayley table of $\mathbb{Z}_4 \times \mathbb{Z}_4 = \langle a,b \, | \, a^4=b^4 = aba^{-1}b^{-1}=1\rangle$ with a Hamilton 2-plex in red}\label{fig:z4z4}
+%\caption{The Cayley table of $\mathbb{Z}_4 \times \mathbb{Z}_4 = \langle a,b \, | \, a^4=b^4 = aba^{-1}b^{-1}=1\rangle$ with a Hamilton 2-plex in red}\label{fig:z4z4}
 %\end{center}
 %\end{figure}
 
@@ -1799,12 +1830,12 @@ is an H2-harmonious sequence of $\mathbb{Z}_4\times\mathbb{Z}_4$ is straightforw
 \end{proof}
 
 We now turn to the key lemma in our inductive proof that all sufficiently large abelian \gls{2-group}s are H2-harmonious. 
-Although we use group-theoretic language in the proof of this lemma, it worth giving a brief graph-theoretic description of the underlying ideas. Inspired by the proof of a similar lemma concerning harmonious groups in Section 6 of \cite{BGHJ91}, our H2-harmonious sequences consist of two pairs of long periodic subsequences connected by two short, ad-hoc subsequences. These pairs of long sequences correspond to long \gls{2-bounded} paths in $K_{n,n}(G)$, and the challenge of establishing the following result was to find short paths which use the outstanding edge labels while tying these two long paths together into a \gls{Hamilton cycle}.
+Although we use group-theoretic language in the proof of this lemma, it is worth giving a brief graph-theoretic description of the underlying ideas. Inspired by the proof of a similar lemma concerning harmonious groups in Section 6 of \cite{BGHJ91}, our H2-harmonious sequences consist of two pairs of long periodic subsequences connected by two short, ad-hoc subsequences. These pairs of long sequences correspond to long \gls{2-bounded} paths in $K_{n,n}(G)$, and the challenge of establishing the following result was to find short paths which use the outstanding edge labels while tying these two long paths together into a \gls{Hamilton cycle}.
 
 
 
 \begin{lemma}
-If a finite abelian group $G$ is an extension of a nontrivial H2-harmonious group by $\mathbb{Z}_2\times\mathbb{Z}_2$, then $G$ is H2-harmonious.
+If a finite abelian group $G$ is an extension of $\mathbb{Z}_2\times\mathbb{Z}_2$ by a nontrivial H2-harmonious group, then $G$ is H2-harmonious.
 \label{lemma:h2z2z2}\end{lemma}
 
 
@@ -1835,7 +1866,7 @@ is an H2-harmonious sequence of $G$ (when $k=1$ the periodic portions of \eqref{
 %
 \begin{equation} a^ib^jr_kc_{k+\delta} \text{ for }i,j,\delta \in \{0,1\} \text{ and }k \in [m]. \label{eq:type}\end{equation}
 %
-Therefore, it suffices to show that every expression of the form \eqref{eq:type} appears exactly once as a product of consecutive elements of the given sequence. Notice that we may take consecutive products, rather than following Definition \ref{def:h2seq} precisely, due to the fact that $G$ is abelian. And indeed, taking consecutive products in \eqref{eq:2g1} gives us a copy of every expression of the form $r_kc_{k + \delta}$ with $k \in [m]$ except $r_mc_1$. Similarly, \eqref{eq:2g2}, \eqref{eq:2g4}, and \eqref{eq:2g5} together give all expressions of the form $ar_kc_{k + \delta}$, $br_kc_{k + \delta}$, and $abr_kc_{k + \delta}$ with $k \in [2,m-1]$. 
+Therefore, it suffices to show that every expression of the form \eqref{eq:type} appears exactly once as a product of consecutive elements of the given sequence. Notice that we may take consecutive products, rather than following Definition \ref{def:h2seq} precisely, since $G$ is abelian. And indeed, taking consecutive products in \eqref{eq:2g1} gives us a copy of every expression of the form $r_kc_{k + \delta}$ with $k \in [m]$ except $r_mc_1$. Similarly, \eqref{eq:2g2}, \eqref{eq:2g4}, and \eqref{eq:2g5} together give all expressions of the form $ar_kc_{k + \delta}$, $br_kc_{k + \delta}$, and $abr_kc_{k + \delta}$ with $k \in [2,m-1]$ and $\delta \in \{0,1\}$. 
 %
 Moreover, the product of the first two terms in \eqref{eq:2g5} gives us the expression $abr_mc_m$, we obtain $br_mc_m$ in the step from \eqref{eq:2g1} to \eqref{eq:2g2}, and we obtain $ar_mc_m$ in the step from \eqref{eq:2g4} to \eqref{eq:2g5}. Finally, we see that the sequence of consecutive products from the final term of \eqref{eq:2g2}, through \eqref{eq:2g3}, to the first term of \eqref{eq:2g4} gives us
 %
@@ -1964,7 +1995,7 @@ while taking consecutive products from the final term of \eqref{eq:2g5}, through
 
 
 \end{tikzpicture} 
-\caption[A Hamilton 2-plex in the \gls{cayley table} of an extension of $\mathbb{Z}_2 \times \mathbb{Z}_2$]{The Hamilton 2-plex in $L_G$ corresponding to the H2-harmonious sequence of $G$ given in the $m \equiv 2 \pmod{3}$ case of Lemma \ref{lemma:h2z2z2}. Consecutive products within the various lines are color-coded as follows:  \textcolor{red}{\eqref{eq:2g7}}, \textcolor{magenta}{\eqref{eq:2g8}}, \textcolor{orange}{\eqref{eq:2g9}}, \textcolor{cyan}{\eqref{eq:2g10}}, \textcolor{green!60!black!90}{\eqref{eq:2g11}}, \textcolor{brown}{\eqref{eq:2g12}}. \textcolor{blue}{Blue} circles, moreover, correspond to products taken between the last term in one line and the first term in the next.}\label{fig:2mod3}
+\caption[A Hamilton 2-plex in the \gls{Cayley table} of an extension of $\mathbb{Z}_2 \times \mathbb{Z}_2$]{The Hamilton 2-plex in $L_G$ corresponding to the H2-harmonious sequence of $G$ given in the $m \equiv 2 \pmod{3}$ case of Lemma \ref{lemma:h2z2z2}. Consecutive products within the various lines are color-coded as follows:  \textcolor{red}{\eqref{eq:2g7}}, \textcolor{magenta}{\eqref{eq:2g8}}, \textcolor{orange}{\eqref{eq:2g9}}, \textcolor{cyan}{\eqref{eq:2g10}}, \textcolor{green!60!black!90}{\eqref{eq:2g11}}, \textcolor{brown}{\eqref{eq:2g12}}. \textcolor{blue}{Blue} circles, moreover, correspond to products taken between the last term in one line and the first term in the next.}\label{fig:2mod3}
 \end{figure}
 
 
@@ -1994,7 +2025,7 @@ is an H2-harmonious sequence of $G$ (see Figure \ref{fig:2mod3} for an illustrat
 is an H2-harmonious sequence of $G$.
 \end{proof}
 
-The astute reader may notice that the lemma just proven is not restricted to \gls{2-group}s, with the proof explicitly considering groups whose order is divisible by 3. Indeed, Lemma \ref{lemma:h2z2z2} will also play an important role in the second step of our proof (as sketched at the beginning of this section): we cannot apply Lemma \ref{lemma:h2util} to groups whose Sylow 2-subgroup is $\mathbb{Z}_2 \times \mathbb{Z}_2$.
+%Although the lemma just proven is the key to establishing that all abelian \gls{2-group}s besides $\mathbb{Z]_2 \times \mathbb{Z}_2$ are H2-harmonious, the astute reader may notice that this lemma is not restricted to 2-groups, with the proof explicitly considering groups whose order is divisible by 3. Indeed, Lemma \ref{lemma:h2z2z2} will also play an important role in the second step of our proof (as sketched at the beginning of this section): we cannot apply Lemma \ref{lemma:h2util} to groups whose Sylow 2-subgroup is $\mathbb{Z}_2 \times \mathbb{Z}_2$.
 
 We now have all the machinery in place to carry out the two step process outlined at the start of this section. First, a proof by induction that the conclusion of Theorem \ref{thm:h2abel} holds for abelian \gls{2-group}s.
 
@@ -2010,7 +2041,7 @@ All finite abelian \gls{2-group}s besides $\mathbb{Z}_2\times \mathbb{Z}_2$ are 
 
 
 \begin{proof}
-We proceed by induction on $|G|$, with Proposition \ref{prop:h2cyc}, Theorem \ref{thm:h2gf2k}, and Theorem \ref{thm:h22xk} establishing the result in the case $|G| \leq 8$. For the induction step, let $G$ be an abelian \gls{2-group} of order at least 16. We may assume $G$ is not cyclic by Proposition \ref{prop:h2cyc}, so the fundamental theorem of finite abelian groups tells us that $G \cong \mathbb{Z}_{2^{k}} \times \mathbb{Z}_{2^{\ell}} \times A$ for some integers $k \geq \ell \geq 1$ and some (possibly trivial) abelian \gls{2-group} $A$ in which every element has order at most $2^\ell$. Letting $a$ denote the unique element of order 2 in the $\mathbb{Z}_{2^{k}}$ factor of $G$ and $b$ the unique element of order 2 in the $\mathbb{Z}_{2^{\ell}}$ factor, the normal subgroup $N = \langle a,b\rangle$ is isomorphic to $\mathbb{Z}_2 \times \mathbb{Z}_2$ and the factor group $Q = G/N$ is an abelian \gls{2-group} satisfying $|Q|<|G|$. If $Q \not\cong \mathbb{Z}_2 \times \mathbb{Z}_2$, then we know by induction that $Q$ is H2-harmonious and Lemma \ref{lemma:h2z2z2} tells us that $G$ is also H2-harmonious. If $Q \cong \mathbb{Z}_2 \times \mathbb{Z}_2$, then we have either $G \cong \mathbb{Z}_4 \times \mathbb{Z}_4$, in which case we may apply Proposition \ref{prop:h2z4z4} to see that $G$ is H2-harmonious, or $G \cong \mathbb{Z}_2^4$, in which case we may apply Theorem \ref{thm:h2gf2k} to obtain the desired result.
+We proceed by induction on $|G|$, with Proposition \ref{prop:h2cyc}, Theorem \ref{thm:h2gf2k}, and Theorem \ref{thm:h22xk} establishing the result in the case $|G| \leq 8$. For the induction step, let $G$ be an abelian \gls{2-group} of order at least 16. We may assume $G$ is not cyclic by Proposition \ref{prop:h2cyc}, so the fundamental theorem of finite abelian groups tells us that $G \cong \mathbb{Z}_{2^{k}} \times \mathbb{Z}_{2^{\ell}} \times A$ for some integers $1 \leq k \leq \ell$ and some abelian \gls{2-group} $A$ which is either trivial or isomorphic to $\mathbb{Z}_{2^{t_1}} \times \mathbb{Z}_{2^{t_2}} \times \cdots \times \mathbb{Z}_{2^{t_m}}$ for some sequence of integers  $(t_i)_{i=1}^m$ satisfying $\ell \leq t_1 \leq t_2  \leq \cdots \leq t_m$. Letting $a$ denote the unique element of order 2 in the $\mathbb{Z}_{2^{k}}$ factor of $G$ and $b$ the unique element of order 2 in the $\mathbb{Z}_{2^{\ell}}$ factor, the normal subgroup $N = \langle a,b\rangle$ is isomorphic to $\mathbb{Z}_2 \times \mathbb{Z}_2$ and the factor group $Q = G/N$ is an abelian \gls{2-group} satisfying $|Q|<|G|$. If $Q \not\cong \mathbb{Z}_2 \times \mathbb{Z}_2$, then we know by induction that $Q$ is H2-harmonious and Lemma \ref{lemma:h2z2z2} tells us that $G$ is also H2-harmonious. If $Q \cong \mathbb{Z}_2 \times \mathbb{Z}_2$, then we have either $G \cong \mathbb{Z}_4 \times \mathbb{Z}_4$, in which case we may apply Proposition \ref{prop:h2z4z4} to see that $G$ is H2-harmonious, or $G \cong \mathbb{Z}_2^4$, in which case we may apply Theorem \ref{thm:h2gf2k} to obtain the desired result.
 \end{proof}
 
 Finally, the hard work is done and we can enjoy the fruits of our labor with a very short proof of this chapter's main theorem.
@@ -2020,7 +2051,7 @@ Let $G$ be a finite abelian group and let $S$ be a Sylow 2-subgroup of $G$. By t
 %
 \end{proof}
 
-
+It is worth noting that we have also just completed the proof of Theorem \ref{thm:h2main}, which follows directly from Lemma \ref{lemma:h2z2z2} and Lemma \ref{lemma:h2util} via Theorems \ref{thm:h2abel} and  \ref{thm:h22xk}.
 
 \section{Small H2-harmonious groups}\label{sec:smallgrps}
 
@@ -2070,19 +2101,19 @@ In this chapter we offer further evidence in support of Conjecture \ref{conj:mai
 %For ease of exposition, we follow \cite{Al20plus} in assigning to each $k$-edge-colored graph $G$ a vector $x(G) = (x_1,x_2,\ldots,x_k)$ such that $x_i$ is the number of edges in $G$ with color $i$; we refer to $x(G)$ as the \defn{color-support vector} of $G$.
 Most of the work in this chapter was initially motivated by the question(s): when can we guarantee that, for a generalized latin square $L$, there is a \gls{Hamilton cycle} in $K_{n,n}(L)$ whose color distribution has certain desirable properties? Notice that Conjecture \ref{conj:main} can be stated in this manner: for every latin square $L$, there is Hamilton cycle in $K_{n,n}(L)$ with two edges of every color. 
 
-We will begin by showing that, for every latin square $L$, there is a Hamilton cycle in $K_{n,n}(L)$ containing at least one edge of each color. This is in some sense a warm-up for our first main result, which uses similar techniques to find Hamilton 2-plexes in arrays which do not contain too many copies of any symbol. Recall that a $k$-bounded $n$-square is an $n\times n$ array in which no symbol appears more than $k$ times. In Section \ref{sec:LLLL}, we use the lopsided Lov\'asz Local Lemma to prove the following. 
+We will begin by showing that, for every latin square $L$, there is a Hamilton cycle in $K_{n,n}(L)$ containing at least one edge of each color. This is in some sense a warm-up for our first main result, which uses similar techniques to find Hamilton (2,2)-plexes in arrays which do not contain too many copies of any symbol. Recall that a $k$-bounded $n$-square is an $n\times n$ array in which no symbol appears more than $k$ times. In Section \ref{sec:LLLL}, we use the lopsided Lov\'asz Local Lemma to prove the following. 
 
 \begin{theorem}
-Every $\frac{n}{\sqrt{96}}$-bounded $n$-square has a Hamilton 2-plex. 
+Every $\frac{n}{\sqrt{96}}$-bounded $n$-square has a Hamilton (2,2)-plex. 
 \label{thm:LLLLmain}\end{theorem}
 
-It seems likely that this result is not tight, though it is not clear how much it could be improved. One may ask: what is the largest $c$ such that every $cn$-bounded $n$-square has a Hamilton 2-plex? The existence of $n$-bounded $n$-squares, i.e.\! \gls{equi-$n$ square}s, with no near transversals  \cite{PS19} indicates that perhaps some equi-$n$-squares do not have Hamilton 2-plexes. However, we were unable modify the construction from \cite{PS19} to find equi-$n$-squares with no Hamilton 2-plex despite spending a significant amount of time attempting to do so. This inspires an interesting question about which we cannot yet confidently form a conjecture.
+It seems likely that this result is not tight, though it is not clear how much it could be improved. One may ask: what is the largest $c$ such that every $cn$-bounded $n$-square has a Hamilton (2,2)-plex? The existence of $n$-bounded $n$-squares, i.e.\! \gls{equi-$n$ square}s, with no near transversals  \cite{PS19} indicates that perhaps some equi-$n$-squares do not have Hamilton 2-plexes. However, we were unable to modify the construction from \cite{PS19} to find equi-$n$-squares with no Hamilton 2-plex despite spending a significant amount of time attempting to do so. This inspires an interesting question about which we cannot yet confidently form a conjecture.
 
 \begin{question}
  Does every equi-$n$ square have a Hamilton 2-plex? 
 \end{question}
 
-The second half of this chapter is concerned mostly with $(k,\ell)$-plexes in latin squares, or collections of cells which intersect each row and each column $k$ times and contain at most $\ell$ copies of each symbol. We also consider \defn{partial $k$-plexes}, or collections of cells which intersect each row and column at most $k$ times and contain at most $k$ copies of each symbol. Conjecture \ref{conj:wanless} asserts that, when $k$ is an even integer, there is a $k$-plex in every latin square of order at least $k$. Therefore, when $k$ is even, it should be possible to find both large partial $k$-plexes and $(k,\ell)$-plexes for all $\ell \geq k$. But  Egan and Wanless showed that, when $k$ is any odd integer, there exist infinitely many latin squares which do not have a $k$-plex \cite{EW08}. This means it is not clear whether $(k,k+1)$-plexes or large partial $k$-plexes should always exist. The second main result of this chapter shows that one can find both of these structures so long as $n$ is sufficiently large with respect to $k$.
+The second half of this chapter is concerned mostly with $(k,\ell)$-plexes in latin squares, or collections of entries which intersect each row and each column $k$ times and contain at most $\ell$ copies of each symbol. We also consider \defn{partial $k$-plexes}, or collections of entries which intersect each row and column at most $k$ times and contain at most $k$ copies of each symbol. Conjecture \ref{conj:wanless} asserts that, when $k$ is an even integer, there is a $k$-plex in every latin square of order at least $k$. Therefore, when $k$ is even, it should be possible to find both large partial $k$-plexes and $(k,\ell)$-plexes for all $\ell \geq k$. But  Egan and Wanless showed that, when $k$ is any odd integer, there exist infinitely many latin squares which do not have a $k$-plex \cite{EW08}. This means it is not clear whether $(k,k+1)$-plexes or large partial $k$-plexes should always exist. The second main result of this chapter shows that one can find both of these structures so long as $n$ is sufficiently large with respect to $k$.
 
 \begin{theorem}\label{thm:partplex}
 For all $k \geq 1$, there exists $n_0 \in \mathbb{N}$ such that, for all $n \geq n_0$,
@@ -2093,7 +2124,7 @@ For all $k \geq 1$, there exists $n_0 \in \mathbb{N}$ such that, for all $n \geq
 \end{enumerate}
 \end{theorem}
 
-We will also prove that, in the $k=2$ cases of Theorem \ref{thm:partplex}, we can always find Hamilton plexes. We then end the chapter with two $(k,\ell)$-plex existence results which hold for all latin squares, rather than just latin squares which are sufficiently large. In particular, we show that every latin square has a Hamilton $(2,5)$-plex and, for all $k \leq \frac{n}{4}$, every latin square of order $n$ has a $(k,4k)$-plex.  Throughout this chapter, we will often identify paths and cycles with the set of edges comprising them.
+Recall from Section \ref{sec:introplex} that we have recently learned of unpublished work of Pula \cite{PulaThesis} that contains an alternative proof of Theorem \ref{thm:partplex}(b). Our proof of this result will then be extended to show that, in the $k=2$ cases of Theorem \ref{thm:partplex}, we can always find plexes which are in some sense Hamiltonian. Finally, we end the chapter with two $(k,\ell)$-plex existence results which hold for all latin squares, rather than just latin squares which are sufficiently large. In particular, we show that every latin square has a Hamilton $(2,5)$-plex and, for all $k \leq \frac{n}{4}$, every latin square of order $n$ has a $(k,4k)$-plex. The second of these results is similar to another result of Pula \cite{PulaThesis}: for all $k<\frac{n}{11}-o(n)$, every latin square of order $n$ has a $(k,2k$)-plex. Throughout this chapter, we will often identify paths and cycles with the set of edges comprising them.
 
 %In fact, we 
 %\begin{theorem}
@@ -2143,9 +2174,9 @@ Suppose $e,f \in H$ and $e\not\equiv f \pmod{H}$, where $e = r_ic_j$ and $f=r_kc
  Notice that the condition $e\not\equiv f \pmod{H}$ is necessary, as if $e\equiv f \pmod{H}$ then the corresponding operation would break $H$ into two disjoint cycles. Moreover, $\sigma$-switches are not well-defined for adjacent edges. Figure \ref{fig:switch} contains illustration of the procedure.
  
  
-As a first, relatively straightforward application of our switching procedure we consider \defn{Hamilton covers} of latin squares, i.e. \gls{Hamilton cycle}s of the corresponding coloring of $K_{n,n}$ which contain at least one edge of each color. 
+As a first, relatively straightforward application of our switching procedure we consider \defn{Hamilton covers} of latin squares, i.e. \gls{Hamilton cycle}s of $K_{n,n}(L)$ which contain at least one edge of each color. 
 %Recall from Section \ref{sec:introplex} that (1) 
-More generally, a \defn{cover} of a latin square---introduced by Best et al.\! in \cite{BMSW19}---is a collection of cells which intersects every row and column and contains every symbol. It was shown in \cite{BMSW19} shows that Brualdi's conjecture is equivalent to the conjecture that every latin square of order $n$ has a cover of size at most $n+1$. So, the existence of a Hamilton cover (which has size $2n$) should not be particularly surprising. Nonetheless, it is a nontrivial generalization of Hamilton 2-plexes which offers a chance to ease into use of our local switching procedure.
+More generally, a \defn{cover} of a latin square---introduced by Best et al.\! in \cite{BMSW19}---is a collection of entries which intersects every row and column and contains every symbol. It was shown in \cite{BMSW19} that every latin square of order has a cover of size at most $n+12\log^2(n)$. So, the existence of a Hamilton cover (which has size $2n$) should not be particularly surprising. Nonetheless, it is a nontrivial generalization of Hamilton 2-plexes which offers a chance to ease into use of our local switching procedure.
 
 
 
@@ -2166,7 +2197,7 @@ Suppose for the sake of contradiction that there were some latin square $L$ of o
 
 
 
-For $i \in \{1,2\}$, let $A_i \subseteq [n-1]$ denote the set of colors used exactly $i$ times in $H$. Moreover, let $B \subseteq E(H)$ denote the set of edges whose color is not in $A_1$ (i.e.\! edges whose color is used at least twice $H$). Notice that, as $|E(H)| = 2n$ and $w(H) \leq n-1$, there is some $k \in [2,n]$ such that $|A_1| = n-k$ and $|B| = n+k$. Moreover, because $|A_1|+|A_2| \leq w(H)$, we have $|A_2| \leq k-1$. Given vertex sets $S \subseteq R$ and $T \subseteq C$, we write $E_n(S,T)$ for the set of edges $st \in E(K_{n,n})$ such that $s \in S$, $t \in T$, and $\chi_L(st) = n$.  In particular, we are interested in the sets $U_0:= \{r_i : r_ic_i \in F_0 \cap B\}$ and $U_1 := \{c_j :r_{j+1}c_{j} \in F_1 \cap B\}$. 
+For $i \in \{1,2\}$, let $A_i \subseteq [n-1]$ denote the set of colors used exactly $i$ times in $H$. Moreover, let $B \subseteq E(H)$ denote the set of edges whose color is not in $A_1$ (i.e.\! edges whose color is used at least twice n i$H$). Notice that, as $|E(H)| = 2n$ and $w(H) \leq n-1$, there is some $k \in [2,n]$ such that $|A_1| = n-k$ and $|B| = n+k$. Moreover, because $|A_1|+|A_2| \leq w(H)$, we have $|A_2| \leq k-1$. Given vertex sets $S \subseteq R$ and $T \subseteq C$, we write $E_n(S,T)$ for the set of edges $st \in E(K_{n,n})$ such that $s \in S$, $t \in T$, and $\chi_L(st) = n$.  In particular, we are interested in the sets $U_0:= \{r_i : r_ic_i \in F_0 \cap B\}$ and $U_1 := \{c_j :r_{j+1}c_{j} \in F_1 \cap B\}$. 
 %
 Because $\chi_L$ is derived from a latin square, both $E_n(U_0,C)$ and $E_n(R,U_1)$ are matchings which perfectly cover $U_i$ (for $i \in \{0,1\}$). In particular, we have $|E_n(U_0,C)| = |U_0|$ and $|E_n(R,U_1)| = |U_1|$. We also know $|U_i| = |F_i \cap B|$ and $B = (F_0 \cap B) \cup (F_1 \cap B)$, so $|U_0|+|U_1| = |B| = n+k$. We can therefore use the principle of inclusion-exclusion to conclude that
 %
@@ -2227,7 +2258,7 @@ Although the following proof was initially inspired by a paper of Albert, Frieze
 
 
 \begin{proof}[Proof of Theorem \ref{thm:LLLLmain}]
-Let $c = \sqrt{96}$, fix a $\frac{n}{c}$-bounded proper edge-coloring of $K_{n,n}$, and let $\mathcal{T}$ denote the set of all monochromatic (unordered) edge triples in this coloring. The set $\mathcal{T}$ has a natural tripartition into three sets according to the structure of the corresponding induced subgraphs: let $\mathcal{T}_0$ denote the set of monochromatic matchings of size 3, $\mathcal{T}_1$ the set of monochromatic copies of $K_2 \cup P_3$, and $\mathcal{T}_2$ denote the monochromatic paths of length 3. Now, select a Hamilton cycle $H$ uniformly at random from among the $\frac{n!(n-1)!}{2}$ Hamilton cycles in $K_{n,n}$. For each triple $\{e,f,g\} \in \mathcal{T}$, let $A_{efg}$ denote the event that $e$, $f$, and $g$ all belong to $H$ and let $\mathcal{A} = \{A_{efg} \,:\, \{e,f,g\} \in \mathcal{T}\}$. Observe that $H$ is \gls{2-bounded} if and only if the event $\bigcup_{A \in \mathcal{A}} \overline{A}$ holds. Thus,  $\Pr(\bigcup_{A \in \mathcal{A}} \overline{A})>0$ implies the existence of a 2-bounded Hamilton cycle. 
+Let $c = \sqrt{96}$, fix a $\frac{n}{c}$-bounded proper edge-coloring of $K_{n,n}$, and let $\mathcal{T}$ denote the set of all monochromatic (unordered) edge triples in this coloring. The set $\mathcal{T}$ has a natural tripartition into three sets according to the structure of the corresponding induced subgraphs: let $\mathcal{T}_0$ denote the set of monochromatic matchings of size 3, $\mathcal{T}_1$ the set of monochromatic copies of $K_2 \cup P_3$, and $\mathcal{T}_2$ denote the monochromatic paths of length 3. Now, select a Hamilton cycle $H$ uniformly at random from among the $\frac{n!(n-1)!}{2}$ Hamilton cycles in $K_{n,n}$. For each triple $\{e,f,g\} \in \mathcal{T}$, let $A_{efg}$ denote the event that $e$, $f$, and $g$ all belong to $H$ and let $\mathcal{A} = \{A_{efg} \,:\, \{e,f,g\} \in \mathcal{T}\}$. Observe that $H$ is \gls{2-bounded} if and only if the event $\bigcap_{A \in \mathcal{A}} \overline{A}$ holds. Thus,  $\Pr(\bigcap_{A \in \mathcal{A}} \overline{A})>0$ implies the existence of a 2-bounded Hamilton cycle. 
 
 %\begin{figure}
 %\centering
@@ -2247,13 +2278,13 @@ Arbitrarily order $\mathcal{T} = \{T_1,T_2,\ldots,T_k\}$ and $\mathcal{A} = \{A_
 %
 \begin{equation} \Delta = \Delta(D) \leq  \frac{3n(2n-1)(n-c)}{2c^2},\label{eq:LLLLDelta}\end{equation}
 %
-observe that each edge in $K_{n,n}$ is adjacent to $2n-1$ other edges and, given $T \in \mathcal{T}$ and any edge $e \in E(K_{n,n})$ which is adjacent to at least one of the edges in $T$, there are at most $\binom{n/c}{2}$ monochromatic triples containing $e$. 
+observe that each edge in $K_{n,n}$ shares at least one vertex with exactly $2n-1$ edges (including itself) and, given $T \in \mathcal{T}$ and any edge $e \in E(K_{n,n})$ which is adjacent to at least one of the edges in $T$, there are at most $\binom{n/c}{2}$ monochromatic triples containing $e$. 
 
-Let $p = \frac{8}{(n-4)^3+6(n-3)^2}$. To establish the desired result it suffices to show that $D$ is a $p$-dependency graph for $\mathcal{A}$. Indeed, if $D$ is a $p$-dependency graph, then $\Pr(\bigcup_{A \in \mathcal{A}} \overline{A})>0$ follows from Lemma \ref{pLLLL} and the fact that
+Let $p = \frac{8}{(n-4)^3+6(n-3)^2}$. To establish the desired result it suffices to show that $D$ is a $p$-dependency graph for $\mathcal{A}$. Indeed, if $D$ is a $p$-dependency graph, then $\Pr(\bigcap_{A \in \mathcal{A}} \overline{A})>0$ follows from Lemma \ref{pLLLL} and the fact that
 %
 \[ 4p\Delta \leq \frac{96}{2c^2}\frac{n(2n-1)(n-c)}{(n-4)^3+6(n-3)^2} =   \frac{2n^3-(2c+1)n^2+cn}{2n^3-12n^2+24n-20} \leq 1,\]
 %
-where the last inequality holds for all $n \geq 1$ because $c=\sqrt{96}\approx 9.798$. Towards showing that $D$ is a $p$-dependancy graph, fix an arbitrary $x \in [k]$, let $T_x = \{e,f,g\}$, and fix a set $S \subseteq V(D) \setminus N_D[x]$ satisfying  $\Pr(\cap_{j \in S} \overline{A_j}) >0$. We will call a Hamilton cycle \defn{$S$-good} if it satisfies $\cap_{j \in S} \overline{A_j}$; equivalently, $H$ is an $S$-good Hamilton cycle if $T_j \not \subseteq H$ for all $j \in S$. Notice that, because $S$ is comprised of non-neighbors of $x$, any graph obtained from an $S$-good graph via a series of $\sigma$-switches introducing edges adjacent to one of $e$, $f$, or $g$ must also be $S$-good. %because $S \subseteq V(D) \setminus N_D[r]$ and $ij \in E(D)$ if and only if some edge in $T_i$ intersects some edge in $T_j$. 
+where the last inequality holds for all $n \geq 1$ because $c=\sqrt{96}\approx 9.798$. Towards showing that $D$ is a $p$-dependancy graph, fix an arbitrary $x \in [k]$, let $T_x = \{e,f,g\}$, and fix a set $S \subseteq V(D) \setminus N_D[x]$ satisfying  $\Pr(\cap_{j \in S} \overline{A_j}) >0$. We will call a Hamilton cycle \defn{$S$-good} if it satisfies $\cap_{j \in S} \overline{A_j}$; equivalently, $H$ is an $S$-good Hamilton cycle if $T_j \not \subseteq H$ for all $j \in S$. Notice that, because $S$ is comprised of non-neighbors of $x$, any graph obtained from an $S$-good graph via a series of $\sigma$-switches which only introduce edges adjacent to one of $e$, $f$, or $g$ must also be $S$-good. %because $S \subseteq V(D) \setminus N_D[r]$ and $ij \in E(D)$ if and only if some edge in $T_i$ intersects some edge in $T_j$. 
 
 Let $\mathcal{H}$ denote the collection of $S$-good Hamilton cycles and, for each $i \in [0,3]$, let $\mathcal{H}_i$ denote those $S$-good Hamilton cycles $H$ satisfying $| H \cap T_x| = i$. In particular, $\mathcal{H}_3$ denotes the set of $S$-good Hamilton cycles for which $A_x$ holds, so that
 %
@@ -2326,11 +2357,11 @@ To establish \eqref{eq:recipP} we construct two auxiliary bipartite \gls{multigr
  
  By double counting the edges in $G_i$, for $i \in \{0,1\}$, we see that $\delta_i(\mathcal{H}_3)|\mathcal{H}_3| \leq \Delta_i(\mathcal{H}_i)|\mathcal{H}_i|$, so $\frac{|\mathcal{H}_i|}{|\mathcal{H}_3|} \geq \frac{\delta_i(\mathcal{H}_3)}{\Delta_i(\mathcal{H}_i)}$. To determine $\delta_0(\mathcal{H}_3)$, consider an arbitrary $H \in \mathcal{H}_3$. In choosing $e'$ we may not select either of the edges adjacent to $e$, nor may we select $f$ or $g$. This forbids at most 4 possible choices of $e'$; any other edge in $H$ which is not congruent to $e$ modulo $H$ is a valid choice. Therefore, we have at least $n-4$ choices for $e'$. 
  
- As we are only looking for a lower bound for $\delta_0(\mathcal{H}_3)$, we may choose to avoid selecting for $f'$ either of the edges in $\sigma(H;e,e')$ adjacent to both $e$ and $e'$, say $e''$ and $e'''$. We do this ensure that we do not reintroduce $e$ when switching on $f$ and $f'$. Observe that exactly one of $e''$ and $e'''$ is not congruent to $f$ modulo $\sigma(H;e,e')$, so that our choice eliminates exactly one option. Furthermore, as above, we may not select as $f'$ either of the edges adjacent to $f$ in $\sigma(H;e,e')$ and, if $g \not\equiv f \pmod{\sigma(H;e,e')}$, we may not select $g$ for $f'$. These are again the only possible obstructions, giving us at least $n-4$ valid choices for $f'$. 
+ As we are only looking for a lower bound for $\delta_0(\mathcal{H}_3)$, we may choose to avoid selecting for $f'$ either of the edges in $\sigma(H;e,e')$ adjacent to both $e$ and $e'$, say $e''$ and $e'''$. We do this to ensure that we do not reintroduce $e$ when switching on $f$ and $f'$. Observe that exactly one of $e''$ and $e'''$ is not congruent to $f$ modulo $\sigma(H;e,e')$, so that our choice eliminates exactly one option. Furthermore, as above, we may not select as $f'$ either of the edges adjacent to $f$ in $\sigma(H;e,e')$ and, if $g \not\equiv f \pmod{\sigma(H;e,e')}$, we may not select $g$ for $f'$. These are again the only possible obstructions, giving us at least $n-4$ valid choices for $f'$. 
  
  Finally, in choosing $g'$, we will not select $e''$ or $e'''$, nor may we select the analogously defined $f''$ and $f'''$. This eliminates exactly two of the $n$ edges not congruent to $g$ modulo $\sigma(\sigma(H;e,e');f.f')$. As the only other edges we may not select are those adjacent to $g$ in $\sigma(\sigma(H;e,e');f.f')$, we have at least $n-4$ choices for $g'$. This shows that $\delta_0(\mathcal{H}_3) \geq (n-4)^3$. The proof that $\delta_1(\mathcal{H}_3) \geq 3(n-3)^2$ is essentially identical, with the factor of 3 coming from the fact that we have 3 choices for which of $e$, $f$, and $g$ will not be involved in a $\sigma$-switch.
  
- To determine $\Delta_0(\mathcal{H}_0)$, consider an arbitrary $H' \in \mathcal{H}_0$. Let $g=r_0c_0 \not\in H$ and notice that  $H'\setminus\{r_0,c_0\}$ has two connected components. Moreover, there are two edges incident to $r_0$ in $H'$, say $r_0c_1$ and $r_0c_2$, and two edges incident to $c_0$, say $r_1c_0$ and $r_2c_0$, where $r_1$ and $c_1$ are in one component of $H'\setminus\{r_0,c_0\}$ and $r_2$ and $c_2$ are in the other. If there is some $H \in \mathcal{H}_3$ for which $H' = \sigma(\sigma(\sigma(H;e,e');f,f');g,g')$, then we may obtain $\sigma(\sigma(H;e,e');f,f')$ from $H'$ by switching on either $r_1c_0$ and $r_0c_2$ or on $r_2c_0$ and $r_1c_2$ (see Figure \ref{fig:bigswitch}(\subref{fig:switchbackward})). Thus, there are two possible choices for $\sigma(\sigma(H;e,e');f,f')$.  Similarly, for each choice of  $\sigma(\sigma(H;e,e');f,f')$, there are two possibilities for  $\sigma(H;e,e')$, obtained by selecting one of the two edges crossing $f$ in $\sigma(\sigma(H;e,e');f,f')$ to be $f'$. Finally, for each choice of $\sigma(H;e,e')$ we get two choices for $H$ in a similar manner. In total, this gives us at most $8$ options for $H \in N_{G_0}(H')$, and a similar argument tells us that $\Delta_1(\mathcal{H}_1) \leq 4$, completing the proof.
+ To determine $\Delta_0(\mathcal{H}_0)$, consider an arbitrary $H' \in \mathcal{H}_0$. Let $g=r_0c_0 \not\in H$ and notice that  $H'\setminus\{r_0,c_0\}$ has two connected components. Moreover, there are two edges incident to $r_0$ in $H'$, say $r_0c_1$ and $r_0c_2$, and two edges incident to $c_0$, say $r_1c_0$ and $r_2c_0$, where $r_1$ and $c_1$ are in one component of $H'\setminus\{r_0,c_0\}$ and $r_2$ and $c_2$ are in the other. If there is some $H \in \mathcal{H}_3$ for which $H' = \sigma(\sigma(\sigma(H;e,e');f,f');g,g')$, then we may obtain $\sigma(\sigma(H;e,e');f,f')$ from $H'$ by switching on either $r_1c_0$ and $r_0c_2$ or on $r_2c_0$ and $r_1c_2$ (see Figure \ref{fig:bigswitch}(\subref{fig:switchbackward})). Thus, there are two possible choices for $\sigma(\sigma(H;e,e');f,f')$.  Similarly, for each choice of  $\sigma(\sigma(H;e,e');f,f')$, there are two possibilities for  $\sigma(H;e,e')$, obtained by selecting one of the two edges crossing $f$ in $\sigma(\sigma(H;e,e');f,f')$ to be $f'$. Finally, for each choice of $\sigma(H;e,e')$ we get two choices for $H$ in a similar manner. In total, this gives us at most $8$ options for $H \in N_{G_0}(H')$, so $\Delta_0(H_0) \leq 8$, and a similar argument tells us that $\Delta_1(\mathcal{H}_1) \leq 4$, completing the proof.
  %
 \end{proof}
 
@@ -2343,7 +2374,7 @@ To establish \eqref{eq:recipP} we construct two auxiliary bipartite \gls{multigr
 \section{Proof of Theorem \ref{thm:partplex}}\label{sec:egjstuff}
 
 Over the next two sections we will prove Theorem \ref{thm:partplex} and its analogues for Hamilton plexes. 
-These proofs all utilize the rainbow blow-up lemma of Ehard, Glock, and Joos \cite{EGJ20}. To state this fairly technical lemma, we first need to introduce some terminology. Throughout the rest of this chapter, given $n \in \mathbb{N}$ and $\varepsilon>0$ we write $(1 \pm \varepsilon)n$ for the interval $\left((1-\varepsilon)n,(1+\varepsilon)n\right)$. Following \cite{EGJ20}, we say that a bipartite graph $G$ with \gls{bipartition} $(V_1,V_2)$ is \defn{$(\gamma,d)$-super-regular} if
+These proofs all utilize the rainbow blow-up lemma of Ehard, Glock, and Joos \cite{EGJ20}. To state this fairly technical lemma, we first need to introduce some terminology. Throughout the rest of this chapter, given $d,n \in \mathbb{N}$ and $\varepsilon>0$ we write $(d \pm \varepsilon)n$ for the interval $\left((d-\varepsilon)n,(d+\varepsilon)n\right)$. Following \cite{EGJ20}, we say that a bipartite graph $G$ with \gls{bipartition} $(V_1,V_2)$ is \defn{$(\gamma,d)$-super-regular} if
 %
 \begin{itemize}
 \item for all $S \subseteq V_1$ and $T \subseteq V_2$ with $|S| \geq \gamma|V_1|$, $|T| \geq \gamma|V_2|$, we have $e(S,T) \in (d \pm \gamma)|S||T|$,
@@ -2353,7 +2384,7 @@ These proofs all utilize the rainbow blow-up lemma of Ehard, Glock, and Joos \ci
 Moreover, we refer to $(H,G,(X_i)_{i=1}^\ell,(V_i)_{i=1}^\ell)$ as a \defn{$(\gamma,d)$-super-regular blow-up instance} if
 %
 \begin{itemize}
-\item $G$ and $H$ are graphs, $(X_i)_{i=1}^\ell$ and $(V_i)_{i=1}^\ell$ are partitions of $V(H)$ and $V(G)$, respectively, such that $|X_i| = |V_i|$ for all $i \in [\ell]$, and 
+\item $G$ and $H$ are graphs, $(X_i)_{i=1}^\ell$ and $(V_i)_{i=1}^\ell$ are partitions of $V(H)$ and $V(G)$, respectively, such that $|X_i| = |V_i|$ and $X_i$ is an independent set of $H$ for all $i \in [\ell]$, and 
 \item for all $ij \in \binom{[\ell]}{2}$, the subgraph of $G$ induced by $E(V_i,V_j)$ is $(\gamma,d)$-super-regular.
 \end{itemize}
 %
@@ -2363,7 +2394,7 @@ We call an edge-coloring \defn{locally $\Lambda$-bounded} if each vertex is inci
 For all $d,\varepsilon \in (0,1]$ and $\Delta,\Lambda,\ell \in \mathbb{N}$, there exist $\gamma>0$ and $n_0 \in \mathbb{N}$ such that the following holds for all $n \geq n_0$. Suppose $(H,G,(X_i)_{i=1}^\ell,(V_i)_{i=1}^\ell)$ is a $(\gamma,d)$-super-regular blow-up instance. Assume further that
  \renewcommand{\labelenumi}{(\roman{enumi})} 
 \begin{enumerate}
-\item $\Delta(H) \leq \Delta$;
+\item the maximum degree of $H$ satisfies $\Delta(H) \leq \Delta$;
 \item $|V_i| \in (1 \pm \gamma)n$ for all $i \in [\ell]$;
 \item $\chi: E(G) \rightarrow [q]$ is a locally $\Lambda$-bounded edge-coloring such that the following holds for all $a \in [q]$:
 %
@@ -2408,21 +2439,21 @@ For all $\varepsilon >0$ and all $k \geq 2$, there exists $n_0 \in \mathbb{N}$ s
 \label{lemma:LSpart}\end{lemma}
 
 \begin{proof}
-Let $n_1 := \left\lceil\frac{n}{k}\right\rceil$, $n_2 :=\left\lfloor\frac{n}{k}\right\rfloor$, and $\ell := n \pmod{k}$. We want to find $\left\{ R_i \right\}_{i=1}^k \vdash$ \acrshort{RL} and $\left\{ C_i \right\}_{i=1}^k \vdash$\acrshort{CL} satisfying $|R_i| = |C_i| = n_1$ for $i \in [\ell]$ and $|R_i| = |C_i| = n_2$ for $i \in [k]\setminus [\ell]$. We do so probabilistically, independently assigning each $r\in R(L)$ and each $c \in C(L)$ a uniformly random value from $[k]$. This means that, for all $i \in [k]$, the random variables $|R_i|$ and $|C_i|$ are binomially distributed and, because we may assume $n$ is sufficiently large while $k$ is fixed, the DeMoivre-Laplace approximation (see \cite[Sec. 9.2]{MiUpBook}) gives
-%
-%
-\begin{equation*} \Pr\left(|R_i|=n_j\right), \Pr\left(|C_i| = n_j\right) = \Omega(n^{-1/2})\label{eq:ch1}\end{equation*}
-%  
-for all $j \in [2]$.
+Let $n_1 := \left\lceil\frac{n}{k}\right\rceil$, $n_2 :=\left\lfloor\frac{n}{k}\right\rfloor$, and $\ell := n \pmod{k}$. We want to find $\left\{ R_i \right\}_{i=1}^k \vdash$ \acrshort{RL} and $\left\{ C_i \right\}_{i=1}^k \vdash$ \acrshort{CL} satisfying $|R_i| = |C_i| = n_1$ for $i \in [\ell]$ and $|R_i| = |C_i| = n_2$ for $i \in [k]\setminus [\ell]$. We do so probabilistically, independently assigning each $r\in R(L)$ and each $c \in C(L)$ a uniformly random value from $[k]$. Then, for each $i \in [k]$, let $Q_i$ be the event $|R_i|=|C_i|=n_j$, where $j=1$ if $i \in [\ell]$ and otherwise $j=2$. By iteratively applying the definition of conditional probability, we have $ \Pr\left(\bigcap_{i \in [k]} Q_i \right) = \Pr(Q_1) \cdot \prod_{i=2}^k \Pr\left(Q_i  \mid \bigcap_{j=1}^{i-1} Q_j \right)$.
 
-Now, for each symbol $t \in [n]$ and each $i,j \in [k]$, let $S_{i,j}^{(t)}$ be a random variable giving the number of occurrences of $t$ in $A_{i,j}$.  Fixing arbitrary $i$, $j$, and $t$, we can further decompose $S_{i,j}^{(t)}$ into indicator variables $S_{i,j}^{(t)} = \sum_{r \in R(L)} X_r$, where $X_r = 1$ if the unique cell with symbol $t$  in row $r$  of $L$ appears in $A_{i,j}$. Notice that the $X_r$ are independent with mean $\frac{1}{k^2}$. This means $S_{i,j}^{(t)} \sim \Bin\left(n,\frac{1}{k^2}\right)$, and the Chernoff bound gives 
+Our random process was designed so that the random variables $|R_1|$ and $|C_1|$ both have distribution $\Bin(n, \frac{1}{k})$ and, when $2 \leq i < k$ and we are conditioning on the event $\bigcap_{j=1}^{i-1} Q_i$, the random variables $|R_i|$ and $|C_i|$ both have distribution $\Bin\left(\lfloor \frac{n(k-i)}{k} \rfloor, \frac{1}{k-i+1}\right) $. Because $\left\{ R_i \right\}_{i=1}^k$ and $\left\{ C_i \right\}_{i=1}^k$ are determined independently, $\Pr(Q_k \mid \bigcap_{j=1}^{k-1} Q_j)=1$, and we are assuming $n$ is arbitrarily large while $k$ is fixed, we may apply  the DeMoivre-Laplace approximation (see \cite[Sec. 9.2]{MiUpBook})  to obtain
+%
+$\Pr\left(\bigcap_{i \in [k]} Q_i \right) =  \Omega(n^{1-k})$.
+%  
+
+Now, for each symbol $t \in [n]$ and each $i,j \in [k]$, let $S_{i,j}^{(t)}$ be a random variable giving the number of occurrences of $t$ in $A_{i,j}$.  Fixing arbitrary $i$, $j$, and $t$, we can further decompose $S_{i,j}^{(t)}$ into indicator variables $S_{i,j}^{(t)} = \sum_{r \in R(L)} X_r$, where $X_r = 1$ if the unique entry with symbol $t$  in row $r$  of $L$ appears in $A_{i,j}$. Notice that the $X_r$ are independent with mean $\frac{1}{k^2}$. This means $S_{i,j}^{(t)} \sim \Bin\left(n,\frac{1}{k^2}\right)$, and the Chernoff bound gives 
 %
 \begin{equation*} \Pr\left(\left|S_{i,j}^{(t)} - \frac{n}{k^2}\right| \geq \frac{\varepsilon n}{k^2}\right) \leq 2e^{-\varepsilon^2n/3k^2}.\label{eq:ch2}\end{equation*}
 %
 
 Bringing everything together, we see that our random partitions fail to have the desired properties with probability at most
 %
-\[ 1- \alpha n^{-k^2/2} + 2nk^2e^{-\varepsilon^2n/3k^2},\]
+\[ 1- \alpha n^{1-k} + 2nk^2e^{-\varepsilon^2n/3k^2},\]
 %
 for some constant $\alpha$, and this probability is less than 1 for sufficiently large $n$.
 \end{proof}
@@ -2438,22 +2469,22 @@ for some constant $\alpha$, and this probability is less than 1 for sufficiently
 Proving Theorem \ref{thm:partplex}(a) now amounts to combining Lemma \ref{lemma:LSpart} with Corollary \ref{cor:EGJ} to establish the following, more general result. Recall that, for a square array $A$, we use $|A|$ to denote the order of $A$, which is equal to its number of rows. 
 
 \begin{theorem}\label{thm:technicalpart}
-For all integers $k \geq 1$ and all $\varepsilon \in (0,1]$, there exists $n_0 \in \mathbb{N}$ such that the following holds for all $n \geq n_0$. Let $L$ be a latin square of order $n$,  write $(R,C)$ for the vertex bipartition of $K_{n,n}(L)$, and let $\left\{H_i\right\}_{i=1}^k$ be a collection of \gls{balanced bipartite} graphs. If
+For all integers $k \geq 1$ and all $\varepsilon \in (0,1]$, there exists $n_0 \in \mathbb{N}$ such that the following holds for all $n \geq n_0$. Let $L$ be a latin square of order $n$,  write $(R,C)$ for the vertex bipartition of $K_{n,n}(L)$, and let $\left\{G_i\right\}_{i=1}^k$ be a collection of \gls{balanced bipartite} graphs. If
  \renewcommand{\labelenumi}{(\roman{enumi})} 
 \begin{enumerate}
-\item $\left\{ V(H_i) \cap R \right\}_{i=1}^k$ is an \gls{equipartition} of $R$, 
-\item $\Delta(H_i) \leq k$, and
-\item $e(H_i) \leq (1-\varepsilon)n$ for all $i \in [k]$, 
+\item $\left\{ V(G_i) \cap R \right\}_{i=1}^k$ is an \gls{equipartition} of $R$, 
+\item $\Delta(G_i) \leq k$, and
+\item $e(G_i) \leq (1-\varepsilon)n$ for all $i \in [k]$, 
 \end{enumerate}
-then $L$ has a partial $k$-plex isomorphic to $\bigcup_{i=1}^k H_i$.
+then $L$ has a partial $k$-plex isomorphic to $\bigcup_{i=1}^k G_i$.
 \end{theorem}
 
 \begin{proof}
 Assume $n$ is sufficiently large and let $L$ be a latin square of order $n$. Denote by $\left(A_{i,j}\right)_{i,j \in [k]}$ the partition of $L$ into latin subarrays given by Lemma \ref{lemma:LSpart}, so that each symbol appears at most $\left(1+\varepsilon\right)\frac{n}{k^2}$ times in each $A_{i,j}$. Fixing an arbitrary $i \in [k]$, set $\ell= |A_{i,i}|$. Because $\ell \geq \lfloor n/k \rfloor$ and we may assume $n$ is large enough for $\frac{n^2}{(n-k)^2} \leq \frac{1-\varepsilon^2/2}{1-\varepsilon^2}$ to hold, we have
 %
-\[\frac{ \left(1-\varepsilon^2/2\right)\ell^2}{e(H_i)} \geq \frac{(1-\varepsilon^2/2)\ell^2}{(1-\varepsilon)n} \geq \frac{(1-\varepsilon^2/2)(n-k)^2}{(1-\varepsilon)nk^2} \geq  \frac{\left(1+\varepsilon\right)n}{k^2}.  \]
+\[\frac{ \left(1-\varepsilon^2/2\right)\ell^2}{e(G_i)} \geq \frac{(1-\varepsilon^2/2)\ell^2}{(1-\varepsilon)n} \geq \frac{(1-\varepsilon^2/2)(n-k)^2}{(1-\varepsilon)nk^2} \geq  \frac{\left(1+\varepsilon\right)n}{k^2}.  \]
 %
-We may therefore apply Corollary \ref{cor:EGJ} to find a rainbow copy of $H_i$ in $K_{\ell,\ell}(A_{i,i})$. It follows that $\bigcup_{i=1}^kH_i$ is a $k$-bounded subgraph of $K_{n,n}(L)$ with maximum degree at most $k$, and as such its edges correspond to the cells of the desired $k$-plex.
+We may therefore apply Corollary \ref{cor:EGJ} to find a rainbow copy of $G_i$ in $K_{\ell,\ell}(A_{i,i})$. It follows that $\bigcup_{i=1}^kG_i$ is a $k$-bounded subgraph of $K_{n,n}(L)$ with maximum degree at most $k$, and as such its edges correspond to the entries of the desired partial $k$-plex.
 \end{proof}
 
 A partial Hamilton 2-plex is a 2-bounded union of paths in $K_{n,n}(L)$. By letting $k=2$ and both $G_1$ and $G_2$ be the union of a path of order $(1-\varepsilon)n$ and however many isolated vertices are needed to satisfy condition (i) in Theorem \ref{thm:technicalpart}, we obtain the following approximation of Conjecture \ref{conj:main}.
@@ -2485,7 +2516,7 @@ For the rest of this chapter we restrict out attention to $(k,\ell)$-plexes, sta
 Given a proper edge-coloring of $K_{n,n}$ with bipartition classes $R$ and $C$, let $G$ be a subgraph obtained by choosing every color class randomly and independently with probability $p$. Then, with high probability, all vertices in $G$ have degree $(1-o(1))np$ and for every two subsets $A \subseteq R, B \subseteq C$ of size $x \gg \left(\log n/p\right)^2$, $e_G(A,B) \geq (1-o(1))px^2$.
 \end{theorem}
 %
-By setting $p=n^{-1/3}$, setting  $x = \left\lceil\frac{n}{10}\right\rceil$, and using the fact that $\frac{(1-\varepsilon)n^{5/3}}{100} \geq n^{3/2}$ for any $\varepsilon \in (0,1)$ and all sufficiently large $n$, we obtain the following corollary tailored to our particular application. Note that, in the case where $|A|$ or $|B|$ is strictly greater than $\left\lceil\frac{n}{10}\right\rceil$, we can apply Theorem \ref{thm:APS} to arbitrary subsets $A' \subseteq A$ and $B' \subseteq B$ satisfying $|A'|=|B'| = \left\lceil\frac{n}{10}\right\rceil$ to get the desired result.
+By setting $p=n^{-1/3}$, setting  $x = \left\lceil\frac{n}{10}\right\rceil$, and using the fact that $\frac{(1-\varepsilon)n^{5/3}}{100} \geq n^{3/2}$ for any $\varepsilon \in (0,1)$ and all sufficiently large $n$, we obtain the following corollary tailored to our particular application. Note that, in the case where $|A|$ or $|B|$ is strictly greater than $\left\lceil\frac{n}{10}\right\rceil$, we can apply Theorem \ref{thm:APS} to arbitrary subsets $A' \subseteq A$ and $B' \subseteq B$ satisfying $|A'|=|B'| = \left\lceil\frac{n}{10}\right\rceil$ to get the desired result. In what follows, we write $e_T(A,B)$ for the set of edges with a color in the set $T$, one edge in $A$, and the other end in $B$.
 
 \begin{corollary}\label{cor:APS}
 For every latin square $L$ of sufficiently large order $n$, there is a set $T \subseteq $ \acrshort{SL} of size $\lfloor n^{2/3}\rfloor$ such that, for every pair of sets $A\subseteq R(L)$ and $B \subseteq C(L)$ satisfying $|A|,|B| \geq \frac{n}{10}$, we have $e_T(A,B) \geq n^{3/2}$ in $K_{n,n}(L)$.
@@ -2658,7 +2689,7 @@ Similarly, there exists  $c_3 \in C_3$ such that $e_F(R_2,\{c_3\}) \geq \frac{(1
 \end{subfigure}
 
 
-\caption[The two sets of edge switches used in the proof of Theorem \ref{thm:23plex}]{An illustration of the two steps of switches used to tie the three cycles in $P_0$ into a single Hamtilon (2,3)-plex.}
+\caption[The two sets of edge switches used in the proof of Theorem \ref{thm:23plex}]{An illustration of the two steps of switches used to tie the three cycles in $P_0$ into a single Hamilton (2,3)-plex.}
 \label{fig:32ham}
 \end{figure}
 
@@ -2692,9 +2723,9 @@ is the desired Hamilton $(2,3)$-plex.
 
 
 
-Because the proof of Theorem \ref{thm:23plex} relies upon the very technical proof of Corollary \ref{cor:EGJ}, it is not clear exactly how large $n$ must be before we can be certain that every latin square of order $n$ has a Hamilton $(2,3)$-plex. Of course, if Conjecture \ref{conj:main} is true, then every latin square would have a Hamilton $(2,3)$-plex. While we do not yet have a proof of this weaker version of Rodney's conjecture, we can show that all latin squares have a Hamilton (2,5)-plex. 
+Because the proof of Theorem \ref{thm:23plex} relies upon the very technical proof of Corollary \ref{cor:EGJ}, it is not clear exactly how large $n$ must be before we can be certain that every latin square of order $n$ has a Hamilton $(2,3)$-plex. Of course, if Conjecture \ref{conj:main} is true, then every latin square would have a Hamilton $(2,3)$-plex. While we do not yet have a proof of this weaker version of Rodney's conjecture (Conjecture \ref{conj:rodney}), we can show that all latin squares have a Hamilton (2,5)-plex. 
 
-The essential idea behind this proof, as well as the following general existence result for $(k,\ell)$-plexes, is to manipulate $(k,n)$-plexes (i.e. selections of cells in intersecting each row and each column exactly $k$ times) to remove edges with colors appearing too many times. Given a $(k,n)$-plex $P \subseteq L$, let $A_i(P)$ denote the set of colors which appear $i$ times in $P$ and for all $\ell >k$ let the \defn{$\ell$-deficit} of $P$ be the value
+The essential idea behind this proof, as well as the following general existence result for $(k,\ell)$-plexes, is to manipulate $(k,n)$-plexes (i.e. selections of entries in intersecting each row and each column exactly $k$ times) to remove edges with colors appearing too many times. Given a $(k,n)$-plex $P \subseteq L$, let $A_i(P)$ denote the set of colors which appear $i$ times in $P$ and for all $\ell >k$ let the \defn{$\ell$-deficit} of $P$ be the value
 %
 \[ d_\ell(P) := \sum_{i=\ell+1}^n |A_i(P)|.\]
 %
@@ -2732,7 +2763,7 @@ Counting colors in $H_0$, we see that (i) $\sum_{i=1}^n ia_i=2n$ and (ii) $\sum_
 We may assume $a_i>0$ for some $i \geq 6$, as otherwise $H_0$ is a (2,5)-plex and we are done. This means that \eqref{eq:h252} holds so long as $n-a_0 \geq 4$. Moreover, because each color appears at most $n$ times in $K_{n,n}(L)$, we must have $n-a_0 >1$. This leaves two cases to consider. In the case $a_0=n-3$, we have $\frac{1}{2}(n-a_0) = \frac{3}{2}$ and may assume $a_i =0$ for all $i \geq 7$, as otherwise \eqref{eq:h252} must hold. But we may assume $n \geq 9$ by Proposition \ref{prop:upto8}, so the only way we can cover all $2n$ edges of $H_0$ using 3 colors fewer than 7 times each is if $n=9$ and $a_6=3$, in which case \eqref{eq:h252} holds. The case $a_0=n-2$ is even more straightforward: if we use 2 colors to cover the $2n$ edges in $H_0$, then $a_n=2$ and the assumption that $n \geq 9$ implies $\left(\frac{n-5}{2}\right)a_n \geq 4$.
 \end{proof}
 
-We end this section by showing that every latin square has a $(k,4k)$-plex for all $k \leq n$. As was the case with Theorem \ref{thm:h25}, it seems likely that this result is far from best possible, especially in light of Theorem \ref{thm:partplex}(b). Although the argument we use is very similar to the one just presented, we now use the language of latin squares, rather than of edge-colored graphs. In particular, we discuss cells in latin squares as ordered triples, and follow \cite{BPW21} in using $\bullet$ for exactly one of the three indices in a triple, a convention justified by the fact that every cell in a latin square is uniquely defined by any pair of its indices. 
+We end this section by showing that every latin square has a $(k,4k)$-plex for all $k \leq n$. As was the case with Theorem \ref{thm:h25}, it seems likely that this result is far from best possible, especially in light of Theorem \ref{thm:partplex}(b) and Pula's work on disjoint weak 1-plexes in \cite{PulaThesis}. Although the argument we use is very similar to the one just presented, we now use the language of latin squares, rather than of edge-colored graphs. In particular, we discuss entries in latin squares as ordered triples, and follow \cite{BPW21} in using $\bullet$ for exactly one of the three indices in a triple, a convention justified by the fact that every entry in a latin square is uniquely defined by any pair of its indices. 
 
 
 
@@ -2760,7 +2791,7 @@ Now, we know $|U| \geq n-k+1 - \sum_{j=4k-1}^n a_j$ and $|W|\geq n-k+1 - \sum_{j
 %
 \begin{equation} |U \cap W| \geq n-2k+2 -2\sum_{j=4k-1}^n a_j.\label{eq:k4k1}\end{equation}
 %
-Moreover, because $P_0$ is comprised of $kn$ cells, we have $kn = \sum_{j=1}^n ja_j$. From this we see that $(4k-1)\sum_{j=4k-1}^n a_j \leq kn$, and therefore
+Moreover, because $P_0$ is comprised of $kn$ entries, we have $kn = \sum_{j=1}^n ja_j$. From this we see that $(4k-1)\sum_{j=4k-1}^n a_j \leq kn$, and therefore
 %
 \begin{equation} \sum_{j=4k-1}^n a_j \leq \frac{kn}{4k-1} = n\left(\frac{k-1}{4k-1}+\frac{1}{4k-1}\right) \leq n \left(\frac{1}{4} + \frac{1}{4k-1}\right). \label{eq:k4k2}\end{equation}
 %
@@ -2788,7 +2819,7 @@ We showed in Chapter \ref{ch:h2terrace} that many families of groups are H2-harm
 \item Are all symmetric and alternating groups H2-harmonious?
 \end{itemize}
 
-More generally, there are many interesting questions one could ask about Hamilton $(2,\ell)$-plexes. In Section \ref{sec:fe}, we showed that all sufficiently large latin squares have a $(2,3)$-plex. While we were able to prove that all latin squares have a Hamilton (2,5)-plex, a reasonable step towards a proof that all latin squares have a Hamilton 2-plex would be to:
+Recall that we have found H2-harmonious sequences for $S_3$, $S_4$, $A_4$, and $A_5$ (see Appendix \ref{app:smallgrps}). More generally, there are many interesting questions one could ask about Hamilton $(2,\ell)$-plexes. In Section \ref{sec:fe}, we showed that all sufficiently large latin squares have a $(2,3)$-plex. While we were able to prove that all latin squares have a Hamilton (2,5)-plex, a reasonable step towards a proof that all latin squares have a Hamilton 2-plex would be to:
 
 \begin{itemize}
 \item Show that all latin squares have a Hamilton (2,$\ell$)-plex for some $\ell <5$.
@@ -2800,9 +2831,9 @@ While it is in some sense preferable to have theorems that hold for every latin 
 Every latin square has a partial Hamilton 2-plex of size $2n-O(\log n)$. Moreover, almost every latin square has a Hamilton 2-plex. 
 \end{conjecture}
 
-It would also be very interesting to determine if all equi-$n$ squares have Hamilton 2-plexes and, if not, what is the largest value of $c$ such that every $cn$-bounded $n$-square has a Hamilton 2-plex. Theorem \ref{thm:LLLLmain} shows that this value is greater than $ 0.102$. And what about $k$-plexes in equi-$n$ squares for $k>2$? It seems somewhat likely that there exist equi-$n$ squares with no 3-plex.
+It would also be very interesting to determine if all equi-$n$ squares have Hamilton 2-plexes and, if not, what is the largest value of $c$ such that every $cn$-bounded $n$-square has a Hamilton (2.2)-plex. Theorem \ref{thm:LLLLmain} shows that this value is greater than $ 0.102$. And what about $k$-plexes in equi-$n$ squares for $k>2$? Wanless \cite{Wa02} showed that there exist infinitely many latin squares of even order with no odd plexes, but the strongest version of Rodney's conjecture would imply that every latin square of odd order $n$ has a $k$-plex for every $k \in [n]$. Can we find an infinite family of odd order equi-$n$ squares  with no 3-plex.
 
-Most generally, it would be interesting to see the theory of $(k,\ell)$-plexes further developed. An interesting avenue we have not explored is whether all latin squares can be decomposed into $(k,\ell)$-plexes for various values of $k$ and $\ell$. One could also give a definition of indivisible  $(k,\ell)$-plexes and ask related existence questions. However, there  much to explore even with respect to the sort of straightforward existence questions considered above. Theorem \ref{thm:partplex}(b), which shows that all sufficiently large latin squares have a $(k,k+1)$-plex for $k = O(1)$, indicates that,  for some fixed constant $c$, it may be possible to find $(k,k+c)$-plexes in all latin squares, even in the case where $k$ is odd. We end with a question whose answer would indicate the degree to which $(k,\ell)$-plexes behave differently than $k$-plexes.
+Most generally, it would be interesting to see the theory of $(k,\ell)$-plexes further developed. An interesting avenue we have not explored is whether all latin squares can be decomposed into $(k,\ell)$-plexes for various values of $k$ and $\ell$. One could also give a definition of indivisible  $(k,\ell)$-plexes and ask related existence questions. However, there is  much to explore even with respect to the sort of straightforward existence questions considered above. Theorem \ref{thm:partplex}(b), which shows that all sufficiently large latin squares have a $(k,k+1)$-plex for $k = O(1)$, indicates that,  for some fixed constant $c$, it may be possible to find $(k,k+c)$-plexes in all latin squares, even in the case where $k$ is odd. We end with a question whose answer would indicate the degree to which $(k,\ell)$-plexes behave differently than $k$-plexes.
 
 \begin{question}
 Does every latin square of order $4n$ have a $(2n-1,2n)$-plex?
@@ -3507,7 +3538,7 @@ As noted in Section \ref{sec:smallgrps}, the sequencings presented below were fo
  
  \subsection*{The alternating group $A_5$}
  
- Rather than list out the corresponding permutations, which would occupy a significant amount of space, we provide a more concise description: the list of triples, corresponding to cells in $L_{A_5}$, obtained from running the commands:
+ Rather than list out the corresponding permutations, which would occupy a significant amount of space, we provide a more concise description: the list of triples, corresponding to entries in $L_{A_5}$, obtained from running the commands:
  
  \begin{lstlisting}[language=Python,mathescape=true,escapeinside={(*}{*)}]]
  G = AlternatingGroup(5) 
